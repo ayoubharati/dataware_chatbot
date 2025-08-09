@@ -58,7 +58,7 @@ def build_gemini_prompt(user_query: str,
                         per_term_hits: Dict[str, List[Dict[str, Any]]],
                         whole_query_hits: List[Dict[str, Any]],
                         schema_description: str = "") -> str:
-    """Compose a compact but rich prompt for Gemini to synthesize a final query and explanations."""
+    """Compose a comprehensive prompt for Gemini to generate the final query and explanations."""
 
     def fmt_hit(hit: Dict[str, Any]) -> str:
         return f"(score={hit['similarity_score']}, table={hit['table']}, row={hit['row_preview']})"
@@ -222,4 +222,3 @@ if __name__ == '__main__':
     print(f"- Found {sum(len(hits) for hits in result['per_term_hits'].values())} per-term results")
     print(f"- Found {len(result['whole_query_hits'])} whole-query results")
     print(f"- Gemini analysis: {'✅ Success' if 'gemini_output_text' in result else '❌ Failed'}")
-
