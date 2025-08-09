@@ -3,6 +3,7 @@
 # dependencies
 node_modules/
 venv/
+faiss.index
 
 # Expo
 .expo/
