@@ -87,7 +87,7 @@ def build_gemini_prompt(user_query: str,
     lines.append(f"Query: {user_query}")
     lines.append(f"Terms: {extracted_terms}")
     lines.append("")
-    
+
     # Simplified FAISS evidence - only top 3 results per term to reduce tokens
     lines.append("Evidence per term (top 3):")
     for term, hits in per_term_hits.items():
@@ -95,13 +95,13 @@ def build_gemini_prompt(user_query: str,
         for h in hits[:3]:  # Reduced from 10 to 3
             lines.append(f"  {fmt_hit(h)}")
     lines.append("")
-    
+
     # Simplified whole query evidence - only top 5
     lines.append("Whole query evidence (top 5):")
     for h in whole_query_hits[:5]:  # Reduced from 10 to 5
         lines.append(f"  {fmt_hit(h)}")
     lines.append("")
-    
+
     lines.append("Output JSON:")
     lines.append("{")
     lines.append("  \"final_terms\": [ { \"original\": str, \"canonical\": str, \"locations\": [\"table.col\"] } ],")
@@ -118,7 +118,7 @@ def orchestrate_query(user_query: str,
     """End-to-end flow: extract terms, run FAISS per-term and for full query, and optionally call Gemini."""
     
     performance_metrics = {}
-    
+
     # 1) Extract candidate data values (not table/column names)
     print("🔄 Extracting search terms (Gemini #1)...")
     start_time = time.time()
@@ -143,7 +143,7 @@ def orchestrate_query(user_query: str,
         per_term_hits[term] = _run_faiss(engine, term, per_term_k)
         term_time = time.time() - term_start
         print(f"   🔍 FAISS search '{term}': {len(per_term_hits[term])} results ({term_time:.3f}s)")
-    
+
     per_term_search_time = time.time() - start_time
     performance_metrics['per_term_search'] = per_term_search_time
 
@@ -237,10 +237,10 @@ def orchestrate_query(user_query: str,
 def run_complete_analysis(user_query: str):
     """Complete analysis workflow as requested"""
     start_time = time.time()
-    
+
     # Run the complete orchestration
     result = orchestrate_query(user_query, per_term_k=10, whole_query_k=10, call_gemini=True)
-    
+
     execution_time = time.time() - start_time
     
     # Show performance summary
@@ -274,7 +274,7 @@ def run_complete_analysis(user_query: str):
         print(f"Query: {final_query}")
     else:
         print("Query: Failed to generate")
-    
+
     return result
 
 
