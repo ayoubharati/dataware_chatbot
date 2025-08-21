@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-08-21 17:25:37",
+  "user_query": "Find teh custmer segmnt with teh lowst averge duraton on prodct pages from mobil devics in Austrlia, excludng those who never made a purchse",
+  "sql_query": "WITH AustralianMobileTraffic AS (\n    SELECT\n        t.customer_id,\n        AVG(t.duration_seconds) AS avg_duration\n    FROM\n        fact_traffic t\n    JOIN\n        dim_customer c ON t.customer_id = c.customer_id\n    JOIN\n        dim_device d ON t.device_id = d.device_id\n    JOIN\n        dim_country co ON c.country_id = co.country_id\n    WHERE\n        co.country_name = 'Australia'\n        AND d.device_type = 'Mobile'\n    GROUP BY\n        t.customer_id\n),\nCustomerPurchases AS (\n  SELECT DISTINCT customer_id\n  FROM fact_sales\n),\nCombinedData AS (\n  SELECT\n    amt.customer_id,\n    amt.avg_duration,\n    c.segment\n  FROM AustralianMobileTraffic amt\n  JOIN CustomerPurchases cp ON amt.customer_id = cp.customer_id\n  JOIN dim_customer c ON amt.customer_id = c.customer_id\n)\nSELECT segment\nFROM CombinedData\nGROUP BY segment\nORDER BY AVG(avg_duration)\nLIMIT 1;",
+  "chart_result": {
+    "type": "text",
+    "value": "VIP"
+  },
+  "retry_info": {}
+}

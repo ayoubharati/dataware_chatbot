@@ -1,0 +1,51 @@
+Query: Wat percentge of inventry stock levls are below 10 for activ prodcts in onlin stores during holidy quartres, and list teh afected Smart Waches catgories?
+Response:
+RESOLVABLE: yes
+MESSAGE: Here's the percentage of active products with inventory stock levels below 10 in online stores during holiday quarters.  The query also identifies the affected Smart Watches categories. This information is presented as a text response due to the complexity of creating a chart that effectively displays both the percentage and the list of categories.
+SQL: ```sql
+WITH HolidayQuarters AS (
+  SELECT date_id
+  FROM dim_date
+  WHERE quarter IN (4, 1) -- Assuming Q4 and Q1 are holiday quarters. Adjust as needed.
+), OnlineStores AS (
+  SELECT store_id
+  FROM dim_store
+  WHERE store_type = 'Online'
+), LowStockProducts AS (
+  SELECT
+    fi.product_id,
+    COUNT(*) AS num_low_stock
+  FROM fact_inventory fi
+  JOIN HolidayQuarters hq ON fi.date_id = hq.date_id
+  JOIN OnlineStores os ON fi.store_id = os.store_id
+  JOIN dim_product dp ON fi.product_id = dp.product_id
+  WHERE fi.stock_level < 10 AND dp.is_active = TRUE
+  GROUP BY fi.product_id
+), TotalActiveProducts AS (
+  SELECT COUNT(DISTINCT product_id) AS total_active_products
+  FROM fact_inventory fi
+  JOIN HolidayQuarters hq ON fi.date_id = hq.date_id
+  JOIN OnlineStores os ON fi.store_id = os.store_id
+  JOIN dim_product dp ON fi.product_id = dp.product_id
+  WHERE dp.is_active = TRUE
+), AffectedCategories AS (
+  SELECT DISTINCT
+    dc.category_name
+  FROM dim_product dp
+  JOIN dim_category dc ON dp.category_id = dc.category_id
+  JOIN LowStockProducts lsp ON dp.product_id = lsp.product_id
+  WHERE dc.department = 'Electronics' AND dc.category_name LIKE '%Smart Watches%'
+)
+SELECT
+  (CAST(SUM(num_low_stock) AS FLOAT) / (SELECT total_active_products FROM TotalActiveProducts)) * 100 AS low_stock_percentage,
+  (SELECT string_agg(category_name, ', ') FROM AffectedCategories) AS affected_categories;
+```
+RESULT_TYPE: text
+CHART_TYPE: 
+INSIGHTS:
+* The query calculates the exact percentage of active products with low stock levels (below 10) during the specified holiday quarters in online stores.
+* It specifically focuses on active products to avoid including discontinued items in the analysis.
+* The result also provides a list of Smart Watches categories affected by low stock levels.  This allows for a more granular understanding of the problem.
+* The assumption is made that quarters 4 and 1 represent the holiday quarters.  This can be adjusted based on the specific business definition of holiday quarters.
+* The query uses several CTEs (Common Table Expressions) to improve readability and maintainability.
+

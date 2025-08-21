@@ -1,0 +1,54 @@
+Query: Show me teh top 5 prodcts with higest retun rate basd on fraudlent retrns in teh last 6 monts, includng tehir brand and Headphnes nam
+Response:
+RESOLVABLE: yes
+MESSAGE: Here are the top 5 products with the highest fraudulent return rates over the last six months, including their brand and name.  This information is based on fraudulent returns only.  The data is presented in a table for easy review.
+SQL: ```sql
+WITH MonthlyFraudulentReturns AS (
+    SELECT
+        p.product_name,
+        p.brand,
+        COUNT(r.return_id) AS fraudulent_returns
+    FROM
+        fact_returns r
+    JOIN
+        fact_sales s ON r.sale_id = s.sale_id
+    JOIN
+        dim_product p ON s.product_id = p.product_id
+    JOIN
+        dim_date d ON s.date_id = d.date_id
+    WHERE
+        r.is_fraud = TRUE
+        AND d.full_date >= NOW() - INTERVAL '6 months'
+    GROUP BY
+        p.product_name,
+        p.brand
+),
+RankedReturns AS (
+    SELECT
+        product_name,
+        brand,
+        fraudulent_returns,
+        RANK() OVER (ORDER BY fraudulent_returns DESC) AS return_rank
+    FROM
+        MonthlyFraudulentReturns
+)
+SELECT
+    product_name,
+    brand,
+    fraudulent_returns
+FROM
+    RankedReturns
+WHERE
+    return_rank <= 5
+ORDER BY
+    fraudulent_returns DESC;
+```
+RESULT_TYPE: table
+CHART_TYPE: table
+INSIGHTS:
+- The query identifies the top 5 products with the highest number of fraudulent returns.
+- The results show the product name, brand, and the count of fraudulent returns for each product.
+- This information can be used to investigate potential issues with these products or identify patterns in fraudulent return activity.
+-  The table allows for easy comparison of fraudulent return rates across the top 5 products.
+- Further analysis could involve investigating the reasons for returns for these products.
+

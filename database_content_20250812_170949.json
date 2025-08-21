@@ -1,0 +1,953 @@
+{
+  "database": "dataware_test",
+  "schema": "public",
+  "extracted_at": "2025-08-12 17:09:49",
+  "tables": {
+    "schema_metadata": {
+      "columns": [
+        "table_name",
+        "column_name",
+        "description",
+        "metadata_type"
+      ],
+      "row_count": 10,
+      "data": [
+        {
+          "table_name": "public.dim_campaign",
+          "column_name": null,
+          "description": "Marketing campaign attributes including duration and platform",
+          "metadata_type": "table"
+        },
+        {
+          "table_name": "public.dim_category",
+          "column_name": null,
+          "description": "Product classification hierarchy",
+          "metadata_type": "table"
+        },
+        {
+          "table_name": "public.dim_country",
+          "column_name": null,
+          "description": "Geographical reference data",
+          "metadata_type": "table"
+        },
+        {
+          "table_name": "public.dim_customer",
+          "column_name": null,
+          "description": "Customer demographic information",
+          "metadata_type": "table"
+        },
+        {
+          "table_name": "public.dim_date",
+          "column_name": null,
+          "description": "Time dimension for analytics",
+          "metadata_type": "table"
+        },
+        {
+          "table_name": "public.dim_device",
+          "column_name": null,
+          "description": "Device and browser specifications",
+          "metadata_type": "table"
+        },
+        {
+          "table_name": "public.dim_payment_method",
+          "column_name": null,
+          "description": "Payment options and providers",
+          "metadata_type": "table"
+        },
+        {
+          "table_name": "public.dim_product",
+          "column_name": null,
+          "description": "Product master data with pricing",
+          "metadata_type": "table"
+        },
+        {
+          "table_name": "public.dim_shipping",
+          "column_name": null,
+          "description": "Shipping methods and carriers",
+          "metadata_type": "table"
+        },
+        {
+          "table_name": "public.dim_store",
+          "column_name": null,
+          "description": "Physical store locations",
+          "metadata_type": "table"
+        }
+      ]
+    },
+    "dim_category": {
+      "columns": [
+        "category_id",
+        "category_name",
+        "department"
+      ],
+      "row_count": 10,
+      "data": [
+        {
+          "category_id": 2,
+          "category_name": "Laptops",
+          "department": "Electronics"
+        },
+        {
+          "category_id": 3,
+          "category_name": "Headphones",
+          "department": "Electronics"
+        },
+        {
+          "category_id": 4,
+          "category_name": "Smart Watches",
+          "department": "Electronics"
+        },
+        {
+          "category_id": 5,
+          "category_name": "Gaming Consoles",
+          "department": "Electronics"
+        },
+        {
+          "category_id": 6,
+          "category_name": "Mens Clothing",
+          "department": "Fashion"
+        },
+        {
+          "category_id": 7,
+          "category_name": "Womens Clothing",
+          "department": "Fashion"
+        },
+        {
+          "category_id": 8,
+          "category_name": "Shoes",
+          "department": "Fashion"
+        },
+        {
+          "category_id": 9,
+          "category_name": "Accessories",
+          "department": "Fashion"
+        },
+        {
+          "category_id": 10,
+          "category_name": "Books",
+          "department": "Media"
+        },
+        {
+          "category_id": 11,
+          "category_name": "Home Decor",
+          "department": "Home & Garden"
+        }
+      ]
+    },
+    "dim_customer": {
+      "columns": [
+        "customer_id",
+        "first_name",
+        "last_name",
+        "gender",
+        "birth_date",
+        "email",
+        "phone",
+        "registration_date",
+        "country_id",
+        "segment"
+      ],
+      "row_count": 10,
+      "data": [
+        {
+          "customer_id": 3,
+          "first_name": "Matthew",
+          "last_name": "Thomas",
+          "gender": "Female",
+          "birth_date": "2010-03-22",
+          "email": "user3@email.com",
+          "phone": "+1-042-869-4715",
+          "registration_date": "2022-08-04",
+          "country_id": 9,
+          "segment": "VIP"
+        },
+        {
+          "customer_id": 4,
+          "first_name": "Amanda",
+          "last_name": "Smith",
+          "gender": "Other",
+          "birth_date": "2025-05-29",
+          "email": "user4@email.com",
+          "phone": "+1-167-031-8586",
+          "registration_date": "2020-09-05",
+          "country_id": 8,
+          "segment": "Standard"
+        },
+        {
+          "customer_id": 5,
+          "first_name": "Jane",
+          "last_name": "Gonzalez",
+          "gender": "Male",
+          "birth_date": "1989-06-06",
+          "email": "user5@email.com",
+          "phone": "+1-788-208-4123",
+          "registration_date": "2022-10-03",
+          "country_id": 5,
+          "segment": "VIP"
+        },
+        {
+          "customer_id": 6,
+          "first_name": "Jane",
+          "last_name": "Rodriguez",
+          "gender": "Male",
+          "birth_date": "2020-08-28",
+          "email": "user6@email.com",
+          "phone": "+1-327-040-5180",
+          "registration_date": "2022-01-22",
+          "country_id": 12,
+          "segment": "Basic"
+        },
+        {
+          "customer_id": 7,
+          "first_name": "Daniel",
+          "last_name": "Hernandez",
+          "gender": "Other",
+          "birth_date": "1988-02-18",
+          "email": "user7@email.com",
+          "phone": "+1-315-025-4895",
+          "registration_date": "2020-03-10",
+          "country_id": 9,
+          "segment": "Standard"
+        },
+        {
+          "customer_id": 8,
+          "first_name": "Elizabeth",
+          "last_name": "Rodriguez",
+          "gender": "Female",
+          "birth_date": "2017-09-03",
+          "email": "user8@email.com",
+          "phone": "+1-488-352-8587",
+          "registration_date": "2023-01-22",
+          "country_id": 14,
+          "segment": "Basic"
+        },
+        {
+          "customer_id": 9,
+          "first_name": "Jennifer",
+          "last_name": "Wilson",
+          "gender": "Female",
+          "birth_date": "2003-05-29",
+          "email": "user9@email.com",
+          "phone": "+1-489-467-9406",
+          "registration_date": "2022-12-17",
+          "country_id": 7,
+          "segment": "VIP"
+        },
+        {
+          "customer_id": 10,
+          "first_name": "Robert",
+          "last_name": "Moore",
+          "gender": "Other",
+          "birth_date": "2001-07-08",
+          "email": "user10@email.com",
+          "phone": "+1-612-769-8902",
+          "registration_date": "2023-08-24",
+          "country_id": 7,
+          "segment": "Premium"
+        },
+        {
+          "customer_id": 11,
+          "first_name": "Jessica",
+          "last_name": "Garcia",
+          "gender": "Male",
+          "birth_date": "1968-02-21",
+          "email": "user11@email.com",
+          "phone": "+1-773-637-8208",
+          "registration_date": "2020-12-29",
+          "country_id": 1,
+          "segment": "Basic"
+        },
+        {
+          "customer_id": 12,
+          "first_name": "Jessica",
+          "last_name": "Anderson",
+          "gender": "Female",
+          "birth_date": "2026-03-07",
+          "email": "user12@email.com",
+          "phone": "+1-360-091-5502",
+          "registration_date": "2023-09-26",
+          "country_id": 9,
+          "segment": "Premium"
+        }
+      ]
+    },
+    "dim_product": {
+      "columns": [
+        "product_id",
+        "product_name",
+        "sku",
+        "category_id",
+        "brand",
+        "cost_price",
+        "selling_price",
+        "is_active"
+      ],
+      "row_count": 10,
+      "data": [
+        {
+          "product_id": 3,
+          "product_name": "Product 3",
+          "sku": "SKU-000003",
+          "category_id": 14,
+          "brand": "Generic Brand",
+          "cost_price": "43.09",
+          "selling_price": "335.43",
+          "is_active": true
+        },
+        {
+          "product_id": 4,
+          "product_name": "Product 4",
+          "sku": "SKU-000004",
+          "category_id": 14,
+          "brand": "Generic Brand",
+          "cost_price": "851.26",
+          "selling_price": "1761.37",
+          "is_active": true
+        },
+        {
+          "product_id": 5,
+          "product_name": "Product 5",
+          "sku": "SKU-000005",
+          "category_id": 14,
+          "brand": "Premium Brand",
+          "cost_price": "924.00",
+          "selling_price": "1837.10",
+          "is_active": true
+        },
+        {
+          "product_id": 6,
+          "product_name": "Product 6",
+          "sku": "SKU-000006",
+          "category_id": 14,
+          "brand": "Premium Brand",
+          "cost_price": "974.33",
+          "selling_price": "467.51",
+          "is_active": true
+        },
+        {
+          "product_id": 2,
+          "product_name": "Product 2",
+          "sku": "SKU-000002",
+          "category_id": 14,
+          "brand": "Generic Brand",
+          "cost_price": "867.48",
+          "selling_price": "1704.56",
+          "is_active": true
+        },
+        {
+          "product_id": 7,
+          "product_name": "Product 7",
+          "sku": "SKU-000007",
+          "category_id": 14,
+          "brand": "Generic Brand",
+          "cost_price": "479.87",
+          "selling_price": "208.26",
+          "is_active": true
+        },
+        {
+          "product_id": 8,
+          "product_name": "Product 8",
+          "sku": "SKU-000008",
+          "category_id": 14,
+          "brand": "Premium Brand",
+          "cost_price": "182.99",
+          "selling_price": "417.91",
+          "is_active": true
+        },
+        {
+          "product_id": 9,
+          "product_name": "Product 9",
+          "sku": "SKU-000009",
+          "category_id": 14,
+          "brand": "Generic Brand",
+          "cost_price": "572.10",
+          "selling_price": "775.79",
+          "is_active": true
+        },
+        {
+          "product_id": 10,
+          "product_name": "Product 10",
+          "sku": "SKU-000010",
+          "category_id": 14,
+          "brand": "Generic Brand",
+          "cost_price": "62.59",
+          "selling_price": "275.90",
+          "is_active": true
+        },
+        {
+          "product_id": 11,
+          "product_name": "Product 11",
+          "sku": "SKU-000011",
+          "category_id": 14,
+          "brand": "Generic Brand",
+          "cost_price": "234.23",
+          "selling_price": "674.71",
+          "is_active": true
+        }
+      ]
+    },
+    "dim_campaign": {
+      "columns": [
+        "campaign_id",
+        "campaign_name",
+        "start_date",
+        "end_date",
+        "platform"
+      ],
+      "row_count": 10,
+      "data": [
+        {
+          "campaign_id": 2,
+          "campaign_name": "Back to School",
+          "start_date": "2023-08-15",
+          "end_date": "2023-09-15",
+          "platform": "Google Ads"
+        },
+        {
+          "campaign_id": 3,
+          "campaign_name": "Black Friday Deals",
+          "start_date": "2023-11-20",
+          "end_date": "2023-11-30",
+          "platform": "Instagram"
+        },
+        {
+          "campaign_id": 4,
+          "campaign_name": "Holiday Campaign",
+          "start_date": "2023-12-01",
+          "end_date": "2023-12-31",
+          "platform": "Facebook"
+        },
+        {
+          "campaign_id": 5,
+          "campaign_name": "New Year Fresh Start",
+          "start_date": "2024-01-01",
+          "end_date": "2024-01-31",
+          "platform": "Google Ads"
+        },
+        {
+          "campaign_id": 6,
+          "campaign_name": "Spring Collection",
+          "start_date": "2024-03-01",
+          "end_date": "2024-05-31",
+          "platform": "Instagram"
+        },
+        {
+          "campaign_id": 7,
+          "campaign_name": "Mother's Day Special",
+          "start_date": "2024-04-01",
+          "end_date": "2024-05-15",
+          "platform": "Facebook"
+        },
+        {
+          "campaign_id": 8,
+          "campaign_name": "Summer Essentials",
+          "start_date": "2024-06-01",
+          "end_date": "2024-08-31",
+          "platform": "Google Ads"
+        },
+        {
+          "campaign_id": 9,
+          "campaign_name": "Tech Week",
+          "start_date": "2024-09-01",
+          "end_date": "2024-09-07",
+          "platform": "LinkedIn"
+        },
+        {
+          "campaign_id": 10,
+          "campaign_name": "Fall Fashion",
+          "start_date": "2024-09-15",
+          "end_date": "2024-11-15",
+          "platform": "Instagram"
+        },
+        {
+          "campaign_id": 11,
+          "campaign_name": "Cyber Monday",
+          "start_date": "2024-11-25",
+          "end_date": "2024-12-02",
+          "platform": "Facebook"
+        }
+      ]
+    },
+    "dim_country": {
+      "columns": [
+        "country_id",
+        "country_name",
+        "continent",
+        "currency"
+      ],
+      "row_count": 10,
+      "data": [
+        {
+          "country_id": 2,
+          "country_name": "Canada",
+          "continent": "North America",
+          "currency": "CAD"
+        },
+        {
+          "country_id": 3,
+          "country_name": "United Kingdom",
+          "continent": "Europe",
+          "currency": "GBP"
+        },
+        {
+          "country_id": 4,
+          "country_name": "Germany",
+          "continent": "Europe",
+          "currency": "EUR"
+        },
+        {
+          "country_id": 5,
+          "country_name": "France",
+          "continent": "Europe",
+          "currency": "EUR"
+        },
+        {
+          "country_id": 6,
+          "country_name": "Japan",
+          "continent": "Asia",
+          "currency": "JPY"
+        },
+        {
+          "country_id": 7,
+          "country_name": "Australia",
+          "continent": "Oceania",
+          "currency": "AUD"
+        },
+        {
+          "country_id": 8,
+          "country_name": "Brazil",
+          "continent": "South America",
+          "currency": "BRL"
+        },
+        {
+          "country_id": 9,
+          "country_name": "India",
+          "continent": "Asia",
+          "currency": "INR"
+        },
+        {
+          "country_id": 10,
+          "country_name": "China",
+          "continent": "Asia",
+          "currency": "CNY"
+        },
+        {
+          "country_id": 11,
+          "country_name": "Mexico",
+          "continent": "North America",
+          "currency": "MXN"
+        }
+      ]
+    },
+    "dim_date": {
+      "columns": [
+        "date_id",
+        "full_date",
+        "day",
+        "week",
+        "month",
+        "month_name",
+        "quarter",
+        "year",
+        "is_weekend"
+      ],
+      "row_count": 10,
+      "data": [
+        {
+          "date_id": 2,
+          "full_date": "2023-01-02",
+          "day": 2,
+          "week": 1,
+          "month": 1,
+          "month_name": "January  ",
+          "quarter": 1,
+          "year": 2023,
+          "is_weekend": false
+        },
+        {
+          "date_id": 3,
+          "full_date": "2023-01-03",
+          "day": 3,
+          "week": 1,
+          "month": 1,
+          "month_name": "January  ",
+          "quarter": 1,
+          "year": 2023,
+          "is_weekend": false
+        },
+        {
+          "date_id": 4,
+          "full_date": "2023-01-04",
+          "day": 4,
+          "week": 1,
+          "month": 1,
+          "month_name": "January  ",
+          "quarter": 1,
+          "year": 2023,
+          "is_weekend": false
+        },
+        {
+          "date_id": 5,
+          "full_date": "2023-01-05",
+          "day": 5,
+          "week": 1,
+          "month": 1,
+          "month_name": "January  ",
+          "quarter": 1,
+          "year": 2023,
+          "is_weekend": false
+        },
+        {
+          "date_id": 6,
+          "full_date": "2023-01-06",
+          "day": 6,
+          "week": 1,
+          "month": 1,
+          "month_name": "January  ",
+          "quarter": 1,
+          "year": 2023,
+          "is_weekend": false
+        },
+        {
+          "date_id": 7,
+          "full_date": "2023-01-07",
+          "day": 7,
+          "week": 1,
+          "month": 1,
+          "month_name": "January  ",
+          "quarter": 1,
+          "year": 2023,
+          "is_weekend": true
+        },
+        {
+          "date_id": 8,
+          "full_date": "2023-01-08",
+          "day": 8,
+          "week": 1,
+          "month": 1,
+          "month_name": "January  ",
+          "quarter": 1,
+          "year": 2023,
+          "is_weekend": true
+        },
+        {
+          "date_id": 9,
+          "full_date": "2023-01-09",
+          "day": 9,
+          "week": 2,
+          "month": 1,
+          "month_name": "January  ",
+          "quarter": 1,
+          "year": 2023,
+          "is_weekend": false
+        },
+        {
+          "date_id": 10,
+          "full_date": "2023-01-10",
+          "day": 10,
+          "week": 2,
+          "month": 1,
+          "month_name": "January  ",
+          "quarter": 1,
+          "year": 2023,
+          "is_weekend": false
+        },
+        {
+          "date_id": 11,
+          "full_date": "2023-01-11",
+          "day": 11,
+          "week": 2,
+          "month": 1,
+          "month_name": "January  ",
+          "quarter": 1,
+          "year": 2023,
+          "is_weekend": false
+        }
+      ]
+    },
+    "dim_device": {
+      "columns": [
+        "device_id",
+        "device_type",
+        "os",
+        "browser"
+      ],
+      "row_count": 10,
+      "data": [
+        {
+          "device_id": 2,
+          "device_type": "Mobile",
+          "os": "Android",
+          "browser": "Chrome"
+        },
+        {
+          "device_id": 3,
+          "device_type": "Desktop",
+          "os": "Windows",
+          "browser": "Chrome"
+        },
+        {
+          "device_id": 4,
+          "device_type": "Desktop",
+          "os": "MacOS",
+          "browser": "Safari"
+        },
+        {
+          "device_id": 5,
+          "device_type": "Desktop",
+          "os": "Windows",
+          "browser": "Firefox"
+        },
+        {
+          "device_id": 6,
+          "device_type": "Desktop",
+          "os": "Windows",
+          "browser": "Edge"
+        },
+        {
+          "device_id": 7,
+          "device_type": "Tablet",
+          "os": "iOS",
+          "browser": "Safari"
+        },
+        {
+          "device_id": 8,
+          "device_type": "Tablet",
+          "os": "Android",
+          "browser": "Chrome"
+        },
+        {
+          "device_id": 9,
+          "device_type": "Mobile",
+          "os": "iOS",
+          "browser": "Chrome"
+        },
+        {
+          "device_id": 10,
+          "device_type": "Mobile",
+          "os": "Android",
+          "browser": "Firefox"
+        },
+        {
+          "device_id": 11,
+          "device_type": "Desktop",
+          "os": "Linux",
+          "browser": "Chrome"
+        }
+      ]
+    },
+    "dim_payment_method": {
+      "columns": [
+        "payment_method_id",
+        "method_name",
+        "provider"
+      ],
+      "row_count": 10,
+      "data": [
+        {
+          "payment_method_id": 2,
+          "method_name": "Credit Card",
+          "provider": "Mastercard"
+        },
+        {
+          "payment_method_id": 3,
+          "method_name": "Credit Card",
+          "provider": "American Express"
+        },
+        {
+          "payment_method_id": 4,
+          "method_name": "Debit Card",
+          "provider": "Visa"
+        },
+        {
+          "payment_method_id": 5,
+          "method_name": "PayPal",
+          "provider": "PayPal"
+        },
+        {
+          "payment_method_id": 6,
+          "method_name": "Apple Pay",
+          "provider": "Apple"
+        },
+        {
+          "payment_method_id": 7,
+          "method_name": "Google Pay",
+          "provider": "Google"
+        },
+        {
+          "payment_method_id": 8,
+          "method_name": "Bank Transfer",
+          "provider": "Various"
+        },
+        {
+          "payment_method_id": 9,
+          "method_name": "Cash",
+          "provider": "N/A"
+        },
+        {
+          "payment_method_id": 10,
+          "method_name": "Gift Card",
+          "provider": "Store"
+        },
+        {
+          "payment_method_id": 1,
+          "method_name": "Credit Card",
+          "provider": "Visa"
+        }
+      ]
+    },
+    "dim_shipping": {
+      "columns": [
+        "shipping_id",
+        "shipping_method",
+        "carrier",
+        "shipping_speed"
+      ],
+      "row_count": 10,
+      "data": [
+        {
+          "shipping_id": 2,
+          "shipping_method": "Express",
+          "carrier": "FedEx",
+          "shipping_speed": "Express"
+        },
+        {
+          "shipping_id": 3,
+          "shipping_method": "Priority",
+          "carrier": "USPS",
+          "shipping_speed": "Express"
+        },
+        {
+          "shipping_id": 4,
+          "shipping_method": "Next Day",
+          "carrier": "UPS",
+          "shipping_speed": "Express"
+        },
+        {
+          "shipping_id": 5,
+          "shipping_method": "Two Day",
+          "carrier": "FedEx",
+          "shipping_speed": "Express"
+        },
+        {
+          "shipping_id": 6,
+          "shipping_method": "Ground",
+          "carrier": "FedEx",
+          "shipping_speed": "Standard"
+        },
+        {
+          "shipping_id": 7,
+          "shipping_method": "International",
+          "carrier": "DHL",
+          "shipping_speed": "Standard"
+        },
+        {
+          "shipping_id": 8,
+          "shipping_method": "Express International",
+          "carrier": "DHL",
+          "shipping_speed": "Express"
+        },
+        {
+          "shipping_id": 9,
+          "shipping_method": "Local Delivery",
+          "carrier": "Local Courier",
+          "shipping_speed": "Express"
+        },
+        {
+          "shipping_id": 10,
+          "shipping_method": "Pick Up",
+          "carrier": "Store",
+          "shipping_speed": "Immediate"
+        },
+        {
+          "shipping_id": 1,
+          "shipping_method": "Standard Ground",
+          "carrier": "UPS",
+          "shipping_speed": "Standard"
+        }
+      ]
+    },
+    "dim_store": {
+      "columns": [
+        "store_id",
+        "store_name",
+        "store_type",
+        "location",
+        "region"
+      ],
+      "row_count": 10,
+      "data": [
+        {
+          "store_id": 2,
+          "store_name": "Mobile App",
+          "store_type": "Mobile",
+          "location": "App Store",
+          "region": "Global"
+        },
+        {
+          "store_id": 3,
+          "store_name": "New York Flagship",
+          "store_type": "Physical",
+          "location": "New York, NY",
+          "region": "North America"
+        },
+        {
+          "store_id": 4,
+          "store_name": "Los Angeles Store",
+          "store_type": "Physical",
+          "location": "Los Angeles, CA",
+          "region": "North America"
+        },
+        {
+          "store_id": 5,
+          "store_name": "Chicago Outlet",
+          "store_type": "Physical",
+          "location": "Chicago, IL",
+          "region": "North America"
+        },
+        {
+          "store_id": 6,
+          "store_name": "London Store",
+          "store_type": "Physical",
+          "location": "London, UK",
+          "region": "Europe"
+        },
+        {
+          "store_id": 7,
+          "store_name": "Paris Boutique",
+          "store_type": "Physical",
+          "location": "Paris, France",
+          "region": "Europe"
+        },
+        {
+          "store_id": 8,
+          "store_name": "Tokyo Store",
+          "store_type": "Physical",
+          "location": "Tokyo, Japan",
+          "region": "Asia"
+        },
+        {
+          "store_id": 9,
+          "store_name": "Sydney Store",
+          "store_type": "Physical",
+          "location": "Sydney, Australia",
+          "region": "Oceania"
+        },
+        {
+          "store_id": 10,
+          "store_name": "Berlin Store",
+          "store_type": "Physical",
+          "location": "Berlin, Germany",
+          "region": "Europe"
+        },
+        {
+          "store_id": 11,
+          "store_name": "Toronto Store",
+          "store_type": "Physical",
+          "location": "Toronto, Canada",
+          "region": "North America"
+        }
+      ]
+    }
+  }
+}

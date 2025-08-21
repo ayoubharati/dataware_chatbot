@@ -1,0 +1,23 @@
+Query: Mak a pie chrt of custmer count by segmnt in Germny.
+Response:
+RESOLVABLE: yes
+MESSAGE: Here's a pie chart visualizing the distribution of customer segments within Germany.  The chart shows the proportion of customers belonging to each segment. This allows for a quick understanding of the customer base composition in Germany.
+SQL: ```sql
+SELECT
+  d.segment,
+  COUNT(*) AS customer_count
+FROM dim_customer AS d
+JOIN dim_country AS c
+  ON d.country_id = c.country_id
+WHERE
+  c.country_name = 'Germany'
+GROUP BY
+  d.segment;
+```
+RESULT_TYPE: chart
+CHART_TYPE: pie
+INSIGHTS:
+- The pie chart will clearly show the dominant customer segments in Germany.
+- We can identify which segments are under-represented or over-represented in the German market.
+- This information is valuable for targeted marketing campaigns and resource allocation.
+

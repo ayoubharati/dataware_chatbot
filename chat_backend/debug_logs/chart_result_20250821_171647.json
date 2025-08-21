@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-08-21 17:16:47",
+  "user_query": "Show me teh top 5 prodcts with higest retun rate basd on fraudlent retrns in teh last 6 monts, includng tehir brand and Headphnes nam",
+  "sql_query": "WITH MonthlyFraudulentReturns AS (\n    SELECT\n        p.product_name,\n        p.brand,\n        COUNT(r.return_id) AS fraudulent_returns\n    FROM\n        fact_returns r\n    JOIN\n        fact_sales s ON r.sale_id = s.sale_id\n    JOIN\n        dim_product p ON s.product_id = p.product_id\n    JOIN\n        dim_date d ON s.date_id = d.date_id\n    WHERE\n        r.is_fraud = TRUE\n        AND d.full_date >= NOW() - INTERVAL '6 months'\n    GROUP BY\n        p.product_name,\n        p.brand\n),\nRankedReturns AS (\n    SELECT\n        product_name,\n        brand,\n        fraudulent_returns,\n        RANK() OVER (ORDER BY fraudulent_returns DESC) AS return_rank\n    FROM\n        MonthlyFraudulentReturns\n)\nSELECT\n    product_name,\n    brand,\n    fraudulent_returns\nFROM\n    RankedReturns\nWHERE\n    return_rank <= 5\nORDER BY\n    fraudulent_returns DESC;",
+  "chart_result": {
+    "type": "text",
+    "value": "No data found"
+  },
+  "retry_info": {}
+}

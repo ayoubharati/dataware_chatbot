@@ -12,8 +12,8 @@ class MultiTableEmbeddingSearch:
         self.model = SentenceTransformer('all-MiniLM-L12-v2')
         self.index = None
         self.metadata = []
-        self.index_path = "faiss.index"
-        self.metadata_path = "metadata.pkl"
+        self.index_path = os.path.join(os.path.dirname(__file__), "faiss.index")
+        self.metadata_path = os.path.join(os.path.dirname(__file__), "metadata.pkl")
 
     def load_from_cache(self) -> bool:
         if os.path.exists(self.index_path) and os.path.exists(self.metadata_path):

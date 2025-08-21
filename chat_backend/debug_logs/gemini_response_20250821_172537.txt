@@ -1,0 +1,49 @@
+Query: Find teh custmer segmnt with teh lowst averge duraton on prodct pages from mobil devics in Austrlia, excludng those who never made a purchse
+Response:
+RESOLVABLE: yes
+MESSAGE: Here's the customer segment with the lowest average time spent on product pages from mobile devices in Australia, excluding customers who have never made a purchase.  The data considers only customers with at least one purchase.  The result is presented as a simple text output.
+SQL: ```sql
+WITH AustralianMobileTraffic AS (
+    SELECT
+        t.customer_id,
+        AVG(t.duration_seconds) AS avg_duration
+    FROM
+        fact_traffic t
+    JOIN
+        dim_customer c ON t.customer_id = c.customer_id
+    JOIN
+        dim_device d ON t.device_id = d.device_id
+    JOIN
+        dim_country co ON c.country_id = co.country_id
+    WHERE
+        co.country_name = 'Australia'
+        AND d.device_type = 'Mobile'
+    GROUP BY
+        t.customer_id
+),
+CustomerPurchases AS (
+  SELECT DISTINCT customer_id
+  FROM fact_sales
+),
+CombinedData AS (
+  SELECT
+    amt.customer_id,
+    amt.avg_duration,
+    c.segment
+  FROM AustralianMobileTraffic amt
+  JOIN CustomerPurchases cp ON amt.customer_id = cp.customer_id
+  JOIN dim_customer c ON amt.customer_id = c.customer_id
+)
+SELECT segment
+FROM CombinedData
+GROUP BY segment
+ORDER BY AVG(avg_duration)
+LIMIT 1;
+```
+RESULT_TYPE: text
+CHART_TYPE: 
+INSIGHTS:
+- The query identifies the customer segment exhibiting the shortest average session duration on product pages accessed via mobile devices within Australia.
+- The analysis excludes customers without any purchase history, focusing solely on active buyers.
+- The result provides actionable insights for targeted marketing campaigns or product improvements.
+

@@ -1,0 +1,40 @@
+Query: Show a bar chrt of totl refnd amont for fraud retrns in Mens Clothng by countr
+Response:
+RESOLVABLE: yes
+MESSAGE: Here's a bar chart showing the total refund amount for fraudulent returns in Men's Clothing, broken down by country.  This visualization helps understand which countries have the highest refund amounts associated with fraudulent returns in this specific category.
+SQL: ```sql
+WITH MensClothingReturns AS (
+  SELECT
+    r.return_id,
+    r.refund_amount,
+    c.country_name
+  FROM fact_returns AS r
+  JOIN fact_sales AS s
+    ON r.sale_id = s.sale_id
+  JOIN dim_product AS p
+    ON s.product_id = p.product_id
+  JOIN dim_category AS cat
+    ON p.category_id = cat.category_id
+  JOIN dim_customer AS cust
+    ON s.customer_id = cust.customer_id
+  JOIN dim_country AS c
+    ON cust.country_id = c.country_id
+  WHERE
+    cat.category_name = 'Mens Clothing' AND r.is_fraud = TRUE
+)
+SELECT
+  country_name,
+  SUM(refund_amount) AS total_refund_amount
+FROM MensClothingReturns
+GROUP BY
+  country_name
+ORDER BY
+  total_refund_amount DESC;
+```
+RESULT_TYPE: chart
+CHART_TYPE: bar
+INSIGHTS:
+- The chart clearly shows which countries have the highest total refund amounts due to fraudulent returns of men's clothing.
+- This information can be used to identify high-risk areas and implement targeted fraud prevention strategies.
+- Comparing these amounts to overall sales figures in each country can provide further insights into fraud rates.
+
