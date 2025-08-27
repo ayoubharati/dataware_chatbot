@@ -1,4 +1,0 @@
-Query: Calculte teh profit margn (seling prce minuss cost prce) for prodcts sold via Blak Friday Deels campains that had mor than 100 convrsions in 2024, gruped by platfrm and mont
-Response:
-RESOLVABLE: no
-MESSAGE: I cannot answer your question.  While the database contains information on sales, products, and marketing campaigns, it lacks the specific information needed to identify "Black Friday Deals" campaigns.  The available campaign names do not include this specific term, and there is no field indicating a campaign's theme or type.

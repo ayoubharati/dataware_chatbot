@@ -1,0 +1,2291 @@
+
+================================================================================
+🔍 WORKFLOW START
+================================================================================
+🚀 QUERY WORKFLOW START
+
+📝 User Query: How many prodcts in teh Headphnes catgory are activ?
+⏰ Start Time: 2025-08-27 16:45:10
+🔄 Max Retries: 3
+
+================================================================================
+📋 STEP: LOAD_SCHEMA
+================================================================================
+⏱️  Duration: 0.15214109420776367s
+✅ Success: True
+
+
+================================================================================
+📋 STEP: EXTRACT_TERMS
+================================================================================
+⏱️  Duration: 1.9097516536712646s
+✅ Success: True
+🔍 Extracted Terms: ['Headphnes catgory']
+
+
+================================================================================
+📋 STEP: FAISS_SEARCH
+================================================================================
+⏱️  Duration: 3.1412487030029297s
+✅ Success: True
+🔎 FAISS Summary: Headphnes catgory:
+[
+  {
+    "similarity_score": 0.4244,
+    "data": {
+      "category_id": 3,
+      "category_name": "Headphones",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.4002,
+    "data": {
+      "category_id": 5,
+      "category_name": "Gaming Consoles",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.3782,
+    "data": {
+      "device_id": 6,
+      "device_type": "Desktop",
+      "os": "Windows",
+      "browser": "Edge"
+    }
+  },
+  {
+    "similarity_score": 0.3776,
+    "data": {
+      "category_id": 2,
+      "category_name": "Laptops",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.3766,
+    "data": {
+      "category_id": 1,
+      "category_name": "Smartphones",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.3765,
+    "data": {
+      "category_id": 19,
+      "category_name": "Toys",
+      "department": "Kids"
+    }
+  },
+  {
+    "similarity_score": 0.3761,
+    "data": {
+      "category_id": 4,
+      "category_name": "Smart Watches",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.3752,
+    "data": {
+      "category_id": 10,
+      "category_name": "Books",
+      "department": "Media"
+    }
+  },
+  {
+    "similarity_score": 0.3701,
+    "data": {
+      "category_id": 11,
+      "category_name": "Home Decor",
+      "department": "Home & Garden"
+    }
+  },
+  {
+    "similarity_score": 0.3666,
+    "data": {
+      "category_id": 17,
+      "category_name": "Skincare",
+      "department": "Health & Beauty"
+    }
+  }
+]
+
+How many prodcts in teh Headphnes catgory are activ?:
+[
+  {
+    "similarity_score": 0.4067,
+    "data": {
+      "category_id": 3,
+      "category_name": "Headphones",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.3952,
+    "data": {
+      "marketing_id": 130,
+      "date_id": 329,
+      "campaign_id": 3,
+      "impressions": 19871,
+      "clicks": 890,
+      "conversions": 185,
+      "spend": "4182.11"
+    }
+  },
+  {
+    "similarity_score": 0.3941,
+    "data": {
+      "marketing_id": 141,
+      "date_id": 340,
+      "campaign_id": 4,
+      "impressions": 27305,
+      "clicks": 1670,
+      "conversions": 99,
+      "spend": "1168.97"
+    }
+  },
+  {
+    "similarity_score": 0.3941,
+    "data": {
+      "marketing_id": 269,
+      "date_id": 477,
+      "campaign_id": 6,
+      "impressions": 1807,
+      "clicks": 1471,
+      "conversions": 22,
+      "spend": "2992.18"
+    }
+  },
+  {
+    "similarity_score": 0.3934,
+    "data": {
+      "marketing_id": 318,
+      "date_id": 501,
+      "campaign_id": 7,
+      "impressions": 48474,
+      "clicks": 529,
+      "conversions": 171,
+      "spend": "4676.28"
+    }
+  },
+  {
+    "similarity_score": 0.393,
+    "data": {
+      "marketing_id": 223,
+      "date_id": 451,
+      "campaign_id": 6,
+      "impressions": 21772,
+      "clicks": 390,
+      "conversions": 41,
+      "spend": "287.08"
+    }
+  },
+  {
+    "similarity_score": 0.3929,
+    "data": {
+      "marketing_id": 331,
+      "date_id": 514,
+      "campaign_id": 6,
+      "impressions": 28460,
+      "clicks": 2544,
+      "conversions": 39,
+      "spend": "238.54"
+    }
+  },
+  {
+    "similarity_score": 0.3927,
+    "data": {
+      "marketing_id": 314,
+      "date_id": 499,
+      "campaign_id": 7,
+      "impressions": 16650,
+      "clicks": 2122,
+      "conversions": 110,
+      "spend": "3977.31"
+    }
+  },
+  {
+    "similarity_score": 0.3925,
+    "data": {
+      "marketing_id": 309,
+      "date_id": 497,
+      "campaign_id": 6,
+      "impressions": 31019,
+      "clicks": 2334,
+      "conversions": 11,
+      "spend": "1754.05"
+    }
+  },
+  {
+    "similarity_score": 0.3925,
+    "data": {
+      "marketing_id": 278,
+      "date_id": 481,
+      "campaign_id": 7,
+      "impressions": 6024,
+      "clicks": 503,
+      "conversions": 62,
+      "spend": "2241.32"
+    }
+  }
+]
+
+
+================================================================================
+📋 STEP: RESOLVABILITY_CHECK
+================================================================================
+⏱️  Duration: 2.702317953109741s
+✅ Success: True
+🎯 Resolvable: True
+💬 Message: Yes, we can determine the number of active products in the Headphones category.  The database schema contains all the necessary information to answer this question.
+🧠 Reasoning: The `dim_product` table contains a `category_id` foreign key referencing `dim_category` and a boolean column `is_active`. The `dim_category` table has a `category_name` column.  We can join `dim_product` with `dim_category` on `category_id`, filter for `category_name` = 'Headphones', and then count the rows where `is_active` is TRUE.  The FAISS search results confirm the existence of a "Headphones" category with a `category_id` of 3, further supporting the resolvability of this query.
+
+
+================================================================================
+🤖 GEMINI INTERACTION: RESOLVABILITY_CHECK
+================================================================================
+📤 PROMPT:
+
+# Database Query Resolvability Analysis
+
+You are an expert PostgreSQL data warehouse analyst. Your task is to analyze whether the user's question can be resolved using the available data warehouse schema and data.
+
+## CRITICAL: Be REASONABLE and GENEROUS in your assessment. Only mark as unresolvable if you are ABSOLUTELY CERTAIN the data cannot be found.
+
+## User Question:
+How many prodcts in teh Headphnes catgory are activ?
+
+
+## Analysis Instructions:
+
+1. **Thoroughly examine** the schema for relevant tables, columns, and relationships
+2. **Look for ANY possible way** to answer the question, even if it requires joins or transformations
+3. **Consider synonyms and variations** (e.g., "sales" = "revenue", "amount", "total")
+4. **Be flexible with geographic terms** (e.g., "India" might be in country_name, region, or store_location)
+5. **Consider time-based queries** (e.g., "2023" can be extracted from date columns)
+6. **Look for category/product relationships** (e.g., "laptop category" might be in category_name or product descriptions)
+
+## RESOLVABILITY RULES:
+
+**Mark as RESOLVABLE if ANY of these are true:**
+- Question asks for data that exists in any table (even if requires joins)
+- Question can be answered with reasonable data transformations
+- You see potential solutions even if uncertain about exact implementation
+- Question uses common business terms (sales, customers, products, etc.)
+- Geographic/time filters can be applied to existing data
+
+**ONLY mark as UNRESOLVABLE if:**
+- Question asks for completely non-existent data types (e.g., "weather data" in sales database)
+- Required operations are fundamentally impossible with current schema
+- Question is completely outside the domain of the database
+
+## Response Format (EXACT):
+```
+RESOLVABLE: yes/no
+MESSAGE: [Friendly explanation of why it is or isn't resolvable]
+REASONING: [Detailed technical reasoning for your decision]
+```
+
+## Examples:
+- If asking for "customer sales" and you have customer and sales tables → RESOLVABLE: yes
+- If asking for "sales by category" and you have sales + category tables → RESOLVABLE: yes
+- If asking for "revenue by region" and you have sales + store/country tables → RESOLVABLE: yes
+- If asking for "weather data" but schema only has sales data → RESOLVABLE: no
+
+## Aditional detail:
+- In the bottom section of the schema, there are paths from tables to other tables that can help identify if there’s a way to reach additional data. Use these paths as guidance to determine resolvability.
+
+## fiass and schema:
+
+- Database Schema:
+# Database Schema: dataware_test
+**Extracted:** 2025-08-21 15:20:29
+
+## Overview
+- **Total Tables:** 17
+
+## Table of Contents
+- [Tables](#tables)
+- [Relationship Paths](#relationship-paths)
+
+## Tables
+
+### `public.dim_campaign`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `campaign_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `campaign_name` | text | ✓ |
+| `start_date` | date | ✓ |
+| `end_date` | date | ✓ |
+| `platform` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_category`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `category_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `category_name` | text | ✓ |
+| `department` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_country`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `country_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `country_name` | text | ✓ |
+| `continent` | text | ✓ |
+| `currency` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_customer`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `customer_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `country_id` | integer | `dim_country.country_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `first_name` | text | ✓ |
+| `last_name` | text | ✓ |
+| `gender` | text | ✓ |
+| `birth_date` | date | ✓ |
+| `email` | text | ✓ |
+| `phone` | text | ✓ |
+| `registration_date` | date | ✓ |
+| `segment` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_date`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `date_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `full_date` | date | ✗ |
+| `day` | integer | ✓ |
+| `week` | integer | ✓ |
+| `month` | integer | ✓ |
+| `month_name` | text | ✓ |
+| `quarter` | integer | ✓ |
+| `year` | integer | ✓ |
+| `is_weekend` | boolean | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_device`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `device_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `device_type` | text | ✓ |
+| `os` | text | ✓ |
+| `browser` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_payment_method`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `payment_method_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `method_name` | text | ✓ |
+| `provider` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_product`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `product_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `category_id` | integer | `dim_category.category_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `product_name` | text | ✓ |
+| `sku` | text | ✓ |
+| `brand` | text | ✓ |
+| `cost_price` | numeric | ✓ |
+| `selling_price` | numeric | ✓ |
+| `is_active` | boolean | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_shipping`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `shipping_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `shipping_method` | text | ✓ |
+| `carrier` | text | ✓ |
+| `shipping_speed` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_store`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `store_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `store_name` | text | ✓ |
+| `store_type` | text | ✓ |
+| `location` | text | ✓ |
+| `region` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_inventory`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `inventory_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+| `product_id` | integer | `dim_product.product_id` | ✓ |
+| `store_id` | integer | `dim_store.store_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `stock_level` | integer | ✓ |
+| `restock_flag` | boolean | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_marketing`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `marketing_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+| `campaign_id` | integer | `dim_campaign.campaign_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `impressions` | integer | ✓ |
+| `clicks` | integer | ✓ |
+| `conversions` | integer | ✓ |
+| `spend` | numeric | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_payments`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `payment_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `sale_id` | integer | `fact_sales.sale_id` | ✓ |
+| `payment_method_id` | integer | `dim_payment_method.payment_method_id` | ✓ |
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `status` | text | ✓ |
+| `transaction_fee` | numeric | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_returns`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `return_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `sale_id` | integer | `fact_sales.sale_id` | ✓ |
+| `return_date_id` | integer | `dim_date.date_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `reason` | text | ✓ |
+| `refund_amount` | numeric | ✓ |
+| `is_fraud` | boolean | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_sales`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `sale_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+| `customer_id` | integer | `dim_customer.customer_id` | ✓ |
+| `product_id` | integer | `dim_product.product_id` | ✓ |
+| `store_id` | integer | `dim_store.store_id` | ✓ |
+| `shipping_id` | integer | `dim_shipping.shipping_id` | ✓ |
+| `payment_method_id` | integer | `dim_payment_method.payment_method_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `quantity` | integer | ✓ |
+| `unit_price` | numeric | ✓ |
+| `total_amount` | numeric | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_traffic`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `traffic_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+| `customer_id` | integer | `dim_customer.customer_id` | ✓ |
+| `device_id` | integer | `dim_device.device_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `page_visited` | text | ✓ |
+| `duration_seconds` | integer | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.schema_metadata`
+
+#### Columns
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `table_name` | text | ✗ |
+| `column_name` | text | ✓ |
+| `description` | text | ✗ |
+| `metadata_type` | text | ✓ |
+
+---
+
+## Relationship Paths
+
+Pre-calculated paths between all tables for query optimization.
+
+### From `dim_campaign`
+
+| Destination | Path |
+|-------------|------|
+| `dim_date` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `)` |
+| `public.fact_inventory` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` campaign_id `)` |
+| `public.fact_payments` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_category`
+
+| Destination | Path |
+|-------------|------|
+| `public.dim_product` | `dim_category(` category_id `) → `public.dim_product(` category_id `)` |
+
+### From `dim_country`
+
+| Destination | Path |
+|-------------|------|
+| `public.dim_customer` | `dim_country(` country_id `) → `public.dim_customer(` country_id `)` |
+
+### From `dim_customer`
+
+| Destination | Path |
+|-------------|------|
+| `dim_date` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `dim_customer(` customer_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `dim_customer(` customer_id `) → `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `dim_customer(` customer_id `) → `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `dim_customer(` customer_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `dim_customer(` customer_id `) → `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `public.fact_inventory` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_customer(` customer_id `) → `public.fact_sales(` customer_id `)` |
+| `public.fact_traffic` | `dim_customer(` customer_id `) → `public.fact_traffic(` customer_id `)` |
+
+### From `dim_date`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `dim_date(` date_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_device` | `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `dim_date(` date_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `dim_date(` date_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `dim_date(` date_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_device`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_device(` device_id `) → `public.fact_traffic(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `)` |
+| `public.fact_inventory` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `dim_device(` device_id `) → `public.fact_traffic(` device_id `)` |
+
+### From `dim_payment_method`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `)` |
+| `dim_product` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` payment_method_id `)` |
+| `public.fact_returns` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `) → `public.fact_returns(` sale_id `)` |
+| `public.fact_sales` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` payment_method_id `)` |
+| `public.fact_traffic` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_product`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_product(` product_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `)` |
+| `dim_payment_method` | `dim_product(` product_id `) → `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_shipping` | `dim_product(` product_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `dim_product(` product_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `public.fact_inventory` | `dim_product(` product_id `) → `public.fact_inventory(` product_id `)` |
+| `public.fact_marketing` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_product(` product_id `) → `public.fact_sales(` product_id `)` |
+| `public.fact_traffic` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_shipping`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_shipping(` shipping_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `)` |
+| `dim_payment_method` | `dim_shipping(` shipping_id `) → `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `dim_shipping(` shipping_id `) → `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_store` | `dim_shipping(` shipping_id `) → `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `public.fact_inventory` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_shipping(` shipping_id `) → `public.fact_sales(` shipping_id `)` |
+| `public.fact_traffic` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_store`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_store(` store_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `)` |
+| `dim_payment_method` | `dim_store(` store_id `) → `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `dim_store(` store_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `dim_store(` store_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `public.fact_inventory` | `dim_store(` store_id `) → `public.fact_inventory(` store_id `)` |
+| `public.fact_marketing` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_store(` store_id `) → `public.fact_sales(` store_id `)` |
+| `public.fact_traffic` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `fact_sales`
+
+| Destination | Path |
+|-------------|------|
+| `dim_date` | `fact_sales(` sale_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `)` |
+| `dim_payment_method` | `fact_sales(` sale_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `public.fact_inventory` | `fact_sales(` sale_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `fact_sales(` sale_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `fact_sales(` sale_id `) → `public.fact_payments(` sale_id `)` |
+| `public.fact_returns` | `fact_sales(` sale_id `) → `public.fact_returns(` sale_id `)` |
+| `public.fact_sales` | `fact_sales(` sale_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` payment_method_id `)` |
+| `public.fact_traffic` | `fact_sales(` sale_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.dim_customer`
+
+| Destination | Path |
+|-------------|------|
+| `dim_country` | `public.dim_customer(` country_id `) → `dim_country(` country_id `)` |
+
+### From `public.dim_product`
+
+| Destination | Path |
+|-------------|------|
+| `dim_category` | `public.dim_product(` category_id `) → `dim_category(` category_id `)` |
+
+### From `public.fact_inventory`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_marketing` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_marketing`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_payments` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_payments`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_payments(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_returns` | `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `) → `public.fact_returns(` sale_id `)` |
+| `public.fact_sales` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` payment_method_id `)` |
+| `public.fact_traffic` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_returns`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_returns(` sale_id `) → `fact_sales(` sale_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_returns(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `public.fact_returns(` sale_id `) → `fact_sales(` sale_id `) → `public.fact_payments(` sale_id `)` |
+| `public.fact_sales` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_sales`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_sales(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_traffic` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_traffic`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_traffic(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+
+---
+
+
+- Available Data Evidence (from FAISS search):
+Headphnes catgory:
+[
+  {
+    "similarity_score": 0.4244,
+    "data": {
+      "category_id": 3,
+      "category_name": "Headphones",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.4002,
+    "data": {
+      "category_id": 5,
+      "category_name": "Gaming Consoles",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.3782,
+    "data": {
+      "device_id": 6,
+      "device_type": "Desktop",
+      "os": "Windows",
+      "browser": "Edge"
+    }
+  },
+  {
+    "similarity_score": 0.3776,
+    "data": {
+      "category_id": 2,
+      "category_name": "Laptops",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.3766,
+    "data": {
+      "category_id": 1,
+      "category_name": "Smartphones",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.3765,
+    "data": {
+      "category_id": 19,
+      "category_name": "Toys",
+      "department": "Kids"
+    }
+  },
+  {
+    "similarity_score": 0.3761,
+    "data": {
+      "category_id": 4,
+      "category_name": "Smart Watches",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.3752,
+    "data": {
+      "category_id": 10,
+      "category_name": "Books",
+      "department": "Media"
+    }
+  },
+  {
+    "similarity_score": 0.3701,
+    "data": {
+      "category_id": 11,
+      "category_name": "Home Decor",
+      "department": "Home & Garden"
+    }
+  },
+  {
+    "similarity_score": 0.3666,
+    "data": {
+      "category_id": 17,
+      "category_name": "Skincare",
+      "department": "Health & Beauty"
+    }
+  }
+]
+
+How many prodcts in teh Headphnes catgory are activ?:
+[
+  {
+    "similarity_score": 0.4067,
+    "data": {
+      "category_id": 3,
+      "category_name": "Headphones",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.3952,
+    "data": {
+      "marketing_id": 130,
+      "date_id": 329,
+      "campaign_id": 3,
+      "impressions": 19871,
+      "clicks": 890,
+      "conversions": 185,
+      "spend": "4182.11"
+    }
+  },
+  {
+    "similarity_score": 0.3941,
+    "data": {
+      "marketing_id": 141,
+      "date_id": 340,
+      "campaign_id": 4,
+      "impressions": 27305,
+      "clicks": 1670,
+      "conversions": 99,
+      "spend": "1168.97"
+    }
+  },
+  {
+    "similarity_score": 0.3941,
+    "data": {
+      "marketing_id": 269,
+      "date_id": 477,
+      "campaign_id": 6,
+      "impressions": 1807,
+      "clicks": 1471,
+      "conversions": 22,
+      "spend": "2992.18"
+    }
+  },
+  {
+    "similarity_score": 0.3934,
+    "data": {
+      "marketing_id": 318,
+      "date_id": 501,
+      "campaign_id": 7,
+      "impressions": 48474,
+      "clicks": 529,
+      "conversions": 171,
+      "spend": "4676.28"
+    }
+  },
+  {
+    "similarity_score": 0.393,
+    "data": {
+      "marketing_id": 223,
+      "date_id": 451,
+      "campaign_id": 6,
+      "impressions": 21772,
+      "clicks": 390,
+      "conversions": 41,
+      "spend": "287.08"
+    }
+  },
+  {
+    "similarity_score": 0.3929,
+    "data": {
+      "marketing_id": 331,
+      "date_id": 514,
+      "campaign_id": 6,
+      "impressions": 28460,
+      "clicks": 2544,
+      "conversions": 39,
+      "spend": "238.54"
+    }
+  },
+  {
+    "similarity_score": 0.3927,
+    "data": {
+      "marketing_id": 314,
+      "date_id": 499,
+      "campaign_id": 7,
+      "impressions": 16650,
+      "clicks": 2122,
+      "conversions": 110,
+      "spend": "3977.31"
+    }
+  },
+  {
+    "similarity_score": 0.3925,
+    "data": {
+      "marketing_id": 309,
+      "date_id": 497,
+      "campaign_id": 6,
+      "impressions": 31019,
+      "clicks": 2334,
+      "conversions": 11,
+      "spend": "1754.05"
+    }
+  },
+  {
+    "similarity_score": 0.3925,
+    "data": {
+      "marketing_id": 278,
+      "date_id": 481,
+      "campaign_id": 7,
+      "impressions": 6024,
+      "clicks": 503,
+      "conversions": 62,
+      "spend": "2241.32"
+    }
+  }
+]
+
+**IMPORTANT: When in doubt, lean toward RESOLVABLE. It's better to try and fail than to reject a potentially valid query.**
+
+
+📥 RESPONSE:
+```
+RESOLVABLE: yes
+MESSAGE: Yes, we can determine the number of active products in the Headphones category.  The database schema contains all the necessary information to answer this question.
+REASONING:The `dim_product` table contains a `category_id` foreign key referencing `dim_category` and a boolean column `is_active`. The `dim_category` table has a `category_name` column.  We can join `dim_product` with `dim_category` on `category_id`, filter for `category_name` = 'Headphones', and then count the rows where `is_active` is TRUE.  The FAISS search results confirm the existence of a "Headphones" category with a `category_id` of 3, further supporting the resolvability of this query.
+```
+
+
+================================================================================
+📋 STEP: GENERATE_INITIAL_QUERY
+================================================================================
+⏱️  Duration: 1.9624559879302979s
+✅ Success: True
+📝 SQL Query: SELECT
+  COUNT(*)
+FROM dim_product
+WHERE
+  category_id = 3 AND is_active = TRUE;
+🤖 Gemini Response: ```sql
+SELECT
+  COUNT(*)
+FROM dim_product
+WHERE
+  category_id = 3 AND is_active = TRUE;
+```
+
+
+================================================================================
+🤖 GEMINI INTERACTION: GENERATE_INITIAL_QUERY
+================================================================================
+📤 PROMPT:
+
+# First generated query
+
+You are an expert PostgreSQL data warehouse query generator. Your task is to generate teh right query using the available data warehouse schema and data.
+
+Generate ONLY the SQL query for the following request. We have already confirmed this query is resolvable.
+
+INSTRUCTIONS:
+- Use the FAISS results to find correct spellings for any misspelled data values in the user query
+- Generate valid Postgres SQL syntax
+- Use the provided schema to construct the correct query. - In the bottom section of the schema, there are paths from tables to other tables that can help identify if there’s a way to reach additional data. Use these paths as guidance to determine resolvability.
+- You MUST provide a working SQL solution - no explanations or additional text
+- Return ONLY the SQL query, nothing else
+
+User Query: How many prodcts in teh Headphnes catgory are activ?
+
+Database Schema: # Database Schema: dataware_test
+**Extracted:** 2025-08-21 15:20:29
+
+## Overview
+- **Total Tables:** 17
+
+## Table of Contents
+- [Tables](#tables)
+- [Relationship Paths](#relationship-paths)
+
+## Tables
+
+### `public.dim_campaign`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `campaign_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `campaign_name` | text | ✓ |
+| `start_date` | date | ✓ |
+| `end_date` | date | ✓ |
+| `platform` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_category`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `category_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `category_name` | text | ✓ |
+| `department` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_country`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `country_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `country_name` | text | ✓ |
+| `continent` | text | ✓ |
+| `currency` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_customer`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `customer_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `country_id` | integer | `dim_country.country_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `first_name` | text | ✓ |
+| `last_name` | text | ✓ |
+| `gender` | text | ✓ |
+| `birth_date` | date | ✓ |
+| `email` | text | ✓ |
+| `phone` | text | ✓ |
+| `registration_date` | date | ✓ |
+| `segment` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_date`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `date_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `full_date` | date | ✗ |
+| `day` | integer | ✓ |
+| `week` | integer | ✓ |
+| `month` | integer | ✓ |
+| `month_name` | text | ✓ |
+| `quarter` | integer | ✓ |
+| `year` | integer | ✓ |
+| `is_weekend` | boolean | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_device`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `device_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `device_type` | text | ✓ |
+| `os` | text | ✓ |
+| `browser` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_payment_method`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `payment_method_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `method_name` | text | ✓ |
+| `provider` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_product`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `product_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `category_id` | integer | `dim_category.category_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `product_name` | text | ✓ |
+| `sku` | text | ✓ |
+| `brand` | text | ✓ |
+| `cost_price` | numeric | ✓ |
+| `selling_price` | numeric | ✓ |
+| `is_active` | boolean | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_shipping`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `shipping_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `shipping_method` | text | ✓ |
+| `carrier` | text | ✓ |
+| `shipping_speed` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_store`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `store_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `store_name` | text | ✓ |
+| `store_type` | text | ✓ |
+| `location` | text | ✓ |
+| `region` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_inventory`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `inventory_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+| `product_id` | integer | `dim_product.product_id` | ✓ |
+| `store_id` | integer | `dim_store.store_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `stock_level` | integer | ✓ |
+| `restock_flag` | boolean | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_marketing`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `marketing_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+| `campaign_id` | integer | `dim_campaign.campaign_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `impressions` | integer | ✓ |
+| `clicks` | integer | ✓ |
+| `conversions` | integer | ✓ |
+| `spend` | numeric | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_payments`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `payment_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `sale_id` | integer | `fact_sales.sale_id` | ✓ |
+| `payment_method_id` | integer | `dim_payment_method.payment_method_id` | ✓ |
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `status` | text | ✓ |
+| `transaction_fee` | numeric | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_returns`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `return_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `sale_id` | integer | `fact_sales.sale_id` | ✓ |
+| `return_date_id` | integer | `dim_date.date_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `reason` | text | ✓ |
+| `refund_amount` | numeric | ✓ |
+| `is_fraud` | boolean | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_sales`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `sale_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+| `customer_id` | integer | `dim_customer.customer_id` | ✓ |
+| `product_id` | integer | `dim_product.product_id` | ✓ |
+| `store_id` | integer | `dim_store.store_id` | ✓ |
+| `shipping_id` | integer | `dim_shipping.shipping_id` | ✓ |
+| `payment_method_id` | integer | `dim_payment_method.payment_method_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `quantity` | integer | ✓ |
+| `unit_price` | numeric | ✓ |
+| `total_amount` | numeric | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_traffic`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `traffic_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+| `customer_id` | integer | `dim_customer.customer_id` | ✓ |
+| `device_id` | integer | `dim_device.device_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `page_visited` | text | ✓ |
+| `duration_seconds` | integer | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.schema_metadata`
+
+#### Columns
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `table_name` | text | ✗ |
+| `column_name` | text | ✓ |
+| `description` | text | ✗ |
+| `metadata_type` | text | ✓ |
+
+---
+
+## Relationship Paths
+
+Pre-calculated paths between all tables for query optimization.
+
+### From `dim_campaign`
+
+| Destination | Path |
+|-------------|------|
+| `dim_date` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `)` |
+| `public.fact_inventory` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` campaign_id `)` |
+| `public.fact_payments` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_category`
+
+| Destination | Path |
+|-------------|------|
+| `public.dim_product` | `dim_category(` category_id `) → `public.dim_product(` category_id `)` |
+
+### From `dim_country`
+
+| Destination | Path |
+|-------------|------|
+| `public.dim_customer` | `dim_country(` country_id `) → `public.dim_customer(` country_id `)` |
+
+### From `dim_customer`
+
+| Destination | Path |
+|-------------|------|
+| `dim_date` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `dim_customer(` customer_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `dim_customer(` customer_id `) → `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `dim_customer(` customer_id `) → `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `dim_customer(` customer_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `dim_customer(` customer_id `) → `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `public.fact_inventory` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_customer(` customer_id `) → `public.fact_sales(` customer_id `)` |
+| `public.fact_traffic` | `dim_customer(` customer_id `) → `public.fact_traffic(` customer_id `)` |
+
+### From `dim_date`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `dim_date(` date_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_device` | `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `dim_date(` date_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `dim_date(` date_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `dim_date(` date_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_device`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_device(` device_id `) → `public.fact_traffic(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `)` |
+| `public.fact_inventory` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `dim_device(` device_id `) → `public.fact_traffic(` device_id `)` |
+
+### From `dim_payment_method`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `)` |
+| `dim_product` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` payment_method_id `)` |
+| `public.fact_returns` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `) → `public.fact_returns(` sale_id `)` |
+| `public.fact_sales` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` payment_method_id `)` |
+| `public.fact_traffic` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_product`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_product(` product_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `)` |
+| `dim_payment_method` | `dim_product(` product_id `) → `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_shipping` | `dim_product(` product_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `dim_product(` product_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `public.fact_inventory` | `dim_product(` product_id `) → `public.fact_inventory(` product_id `)` |
+| `public.fact_marketing` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_product(` product_id `) → `public.fact_sales(` product_id `)` |
+| `public.fact_traffic` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_shipping`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_shipping(` shipping_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `)` |
+| `dim_payment_method` | `dim_shipping(` shipping_id `) → `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `dim_shipping(` shipping_id `) → `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_store` | `dim_shipping(` shipping_id `) → `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `public.fact_inventory` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_shipping(` shipping_id `) → `public.fact_sales(` shipping_id `)` |
+| `public.fact_traffic` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_store`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_store(` store_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `)` |
+| `dim_payment_method` | `dim_store(` store_id `) → `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `dim_store(` store_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `dim_store(` store_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `public.fact_inventory` | `dim_store(` store_id `) → `public.fact_inventory(` store_id `)` |
+| `public.fact_marketing` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_store(` store_id `) → `public.fact_sales(` store_id `)` |
+| `public.fact_traffic` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `fact_sales`
+
+| Destination | Path |
+|-------------|------|
+| `dim_date` | `fact_sales(` sale_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `)` |
+| `dim_payment_method` | `fact_sales(` sale_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `public.fact_inventory` | `fact_sales(` sale_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `fact_sales(` sale_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `fact_sales(` sale_id `) → `public.fact_payments(` sale_id `)` |
+| `public.fact_returns` | `fact_sales(` sale_id `) → `public.fact_returns(` sale_id `)` |
+| `public.fact_sales` | `fact_sales(` sale_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` payment_method_id `)` |
+| `public.fact_traffic` | `fact_sales(` sale_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.dim_customer`
+
+| Destination | Path |
+|-------------|------|
+| `dim_country` | `public.dim_customer(` country_id `) → `dim_country(` country_id `)` |
+
+### From `public.dim_product`
+
+| Destination | Path |
+|-------------|------|
+| `dim_category` | `public.dim_product(` category_id `) → `dim_category(` category_id `)` |
+
+### From `public.fact_inventory`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_marketing` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_marketing`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_payments` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_payments`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_payments(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_returns` | `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `) → `public.fact_returns(` sale_id `)` |
+| `public.fact_sales` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` payment_method_id `)` |
+| `public.fact_traffic` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_returns`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_returns(` sale_id `) → `fact_sales(` sale_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_returns(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `public.fact_returns(` sale_id `) → `fact_sales(` sale_id `) → `public.fact_payments(` sale_id `)` |
+| `public.fact_sales` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_sales`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_sales(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_traffic` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_traffic`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_traffic(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+
+---
+
+
+FAISS Search Results (corrected spellings for misspelled data values): Headphnes catgory:
+[
+  {
+    "similarity_score": 0.4244,
+    "data": {
+      "category_id": 3,
+      "category_name": "Headphones",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.4002,
+    "data": {
+      "category_id": 5,
+      "category_name": "Gaming Consoles",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.3782,
+    "data": {
+      "device_id": 6,
+      "device_type": "Desktop",
+      "os": "Windows",
+      "browser": "Edge"
+    }
+  },
+  {
+    "similarity_score": 0.3776,
+    "data": {
+      "category_id": 2,
+      "category_name": "Laptops",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.3766,
+    "data": {
+      "category_id": 1,
+      "category_name": "Smartphones",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.3765,
+    "data": {
+      "category_id": 19,
+      "category_name": "Toys",
+      "department": "Kids"
+    }
+  },
+  {
+    "similarity_score": 0.3761,
+    "data": {
+      "category_id": 4,
+      "category_name": "Smart Watches",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.3752,
+    "data": {
+      "category_id": 10,
+      "category_name": "Books",
+      "department": "Media"
+    }
+  },
+  {
+    "similarity_score": 0.3701,
+    "data": {
+      "category_id": 11,
+      "category_name": "Home Decor",
+      "department": "Home & Garden"
+    }
+  },
+  {
+    "similarity_score": 0.3666,
+    "data": {
+      "category_id": 17,
+      "category_name": "Skincare",
+      "department": "Health & Beauty"
+    }
+  }
+]
+
+How many prodcts in teh Headphnes catgory are activ?:
+[
+  {
+    "similarity_score": 0.4067,
+    "data": {
+      "category_id": 3,
+      "category_name": "Headphones",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.3952,
+    "data": {
+      "marketing_id": 130,
+      "date_id": 329,
+      "campaign_id": 3,
+      "impressions": 19871,
+      "clicks": 890,
+      "conversions": 185,
+      "spend": "4182.11"
+    }
+  },
+  {
+    "similarity_score": 0.3941,
+    "data": {
+      "marketing_id": 141,
+      "date_id": 340,
+      "campaign_id": 4,
+      "impressions": 27305,
+      "clicks": 1670,
+      "conversions": 99,
+      "spend": "1168.97"
+    }
+  },
+  {
+    "similarity_score": 0.3941,
+    "data": {
+      "marketing_id": 269,
+      "date_id": 477,
+      "campaign_id": 6,
+      "impressions": 1807,
+      "clicks": 1471,
+      "conversions": 22,
+      "spend": "2992.18"
+    }
+  },
+  {
+    "similarity_score": 0.3934,
+    "data": {
+      "marketing_id": 318,
+      "date_id": 501,
+      "campaign_id": 7,
+      "impressions": 48474,
+      "clicks": 529,
+      "conversions": 171,
+      "spend": "4676.28"
+    }
+  },
+  {
+    "similarity_score": 0.393,
+    "data": {
+      "marketing_id": 223,
+      "date_id": 451,
+      "campaign_id": 6,
+      "impressions": 21772,
+      "clicks": 390,
+      "conversions": 41,
+      "spend": "287.08"
+    }
+  },
+  {
+    "similarity_score": 0.3929,
+    "data": {
+      "marketing_id": 331,
+      "date_id": 514,
+      "campaign_id": 6,
+      "impressions": 28460,
+      "clicks": 2544,
+      "conversions": 39,
+      "spend": "238.54"
+    }
+  },
+  {
+    "similarity_score": 0.3927,
+    "data": {
+      "marketing_id": 314,
+      "date_id": 499,
+      "campaign_id": 7,
+      "impressions": 16650,
+      "clicks": 2122,
+      "conversions": 110,
+      "spend": "3977.31"
+    }
+  },
+  {
+    "similarity_score": 0.3925,
+    "data": {
+      "marketing_id": 309,
+      "date_id": 497,
+      "campaign_id": 6,
+      "impressions": 31019,
+      "clicks": 2334,
+      "conversions": 11,
+      "spend": "1754.05"
+    }
+  },
+  {
+    "similarity_score": 0.3925,
+    "data": {
+      "marketing_id": 278,
+      "date_id": 481,
+      "campaign_id": 7,
+      "impressions": 6024,
+      "clicks": 503,
+      "conversions": 62,
+      "spend": "2241.32"
+    }
+  }
+]
+
+DO NOT include:
+- ''', or sql just leave it like that
+- Explanations or descriptions
+- Comments (-- or /* */)
+- "Here is the query:" or similar text
+- Any other text or formatting
+
+## ## wherever you have used “%”, just make it double for sqlalchemy.cyextension.immutable probleme
+
+
+
+📥 RESPONSE:
+```sql
+SELECT
+  COUNT(*)
+FROM dim_product
+WHERE
+  category_id = 3 AND is_active = TRUE;
+```
+
+
+================================================================================
+📋 STEP: TEST_AND_VALIDATE
+================================================================================
+⏱️  Duration: 0.19231224060058594s
+✅ Success: True
+🧪 Final SQL: SELECT
+  COUNT(*)
+FROM dim_product
+WHERE
+  category_id = 3 AND is_active = TRUE;
+📊 Execution Result: {
+  "success": true,
+  "columns": [
+    "count"
+  ],
+  "row_count": 1,
+  "preview": [
+    {
+      "count": 0
+    }
+  ],
+  "execution_time": 0.18935537338256836,
+  "sql_query": "SELECT\n  COUNT(*)\nFROM dim_product\nWHERE\n  category_id = 3 AND is_active = TRUE;",
+  "results": [
+    {
+      "count": 0
+    }
+  ]
+}
+
+
+================================================================================
+📋 STEP: GENERATE_FINAL_RESPONSE
+================================================================================
+⏱️  Duration: 0.9203779697418213s
+✅ Success: True
+🎨 Final Response: {
+  "resolvable": true,
+  "result_type": "table",
+  "query": "SELECT\n  COUNT(*)\nFROM dim_product\nWHERE\n  category_id = 3 AND is_active = TRUE;",
+  "chart_data": null,
+  "result": [
+    {
+      "count": 0
+    }
+  ],
+  "message": "Query executed successfully! Found 1 rows of data."
+}
+
+✅ Workflow completed successfully!
+📊 Final Result: {
+  "resolvable": true,
+  "result_type": "table",
+  "query": "SELECT\n  COUNT(*)\nFROM dim_product\nWHERE\n  category_id = 3 AND is_active = TRUE;",
+  "chart_data": null,
+  "result": [
+    {
+      "count": 0
+    }
+  ],
+  "message": "Query executed successfully! Found 1 rows of data."
+}
+⏱️  Total Workflow Time: 11.081s
+
+================================================================================
+🔍 WORKFLOW END
+================================================================================
+🏁 Workflow completed in 11.081s

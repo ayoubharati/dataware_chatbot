@@ -1,0 +1,4407 @@
+
+================================================================================
+🔍 WORKFLOW START
+================================================================================
+🚀 QUERY WORKFLOW START
+
+📝 User Query: Give me a table of custmers registred in Germny with tehir segmnt and phone numbr
+⏰ Start Time: 2025-08-27 16:43:31
+🔄 Max Retries: 3
+
+================================================================================
+📋 STEP: LOAD_SCHEMA
+================================================================================
+⏱️  Duration: 0.0030019283294677734s
+✅ Success: True
+
+
+================================================================================
+📋 STEP: EXTRACT_TERMS
+================================================================================
+⏱️  Duration: 0.9120676517486572s
+✅ Success: True
+🔍 Extracted Terms: ['Germny country', 'tehir segment']
+
+
+================================================================================
+📋 STEP: FAISS_SEARCH
+================================================================================
+⏱️  Duration: 9.121072769165039s
+✅ Success: True
+🔎 FAISS Summary: Germny country:
+[
+  {
+    "similarity_score": 0.4365,
+    "data": {
+      "country_id": 11,
+      "country_name": "Mexico",
+      "continent": "North America",
+      "currency": "MXN"
+    }
+  },
+  {
+    "similarity_score": 0.4344,
+    "data": {
+      "country_id": 6,
+      "country_name": "Japan",
+      "continent": "Asia",
+      "currency": "JPY"
+    }
+  },
+  {
+    "similarity_score": 0.429,
+    "data": {
+      "country_id": 8,
+      "country_name": "Brazil",
+      "continent": "South America",
+      "currency": "BRL"
+    }
+  },
+  {
+    "similarity_score": 0.4259,
+    "data": {
+      "country_id": 2,
+      "country_name": "Canada",
+      "continent": "North America",
+      "currency": "CAD"
+    }
+  },
+  {
+    "similarity_score": 0.4257,
+    "data": {
+      "country_id": 1,
+      "country_name": "United States",
+      "continent": "North America",
+      "currency": "USD"
+    }
+  },
+  {
+    "similarity_score": 0.4254,
+    "data": {
+      "country_id": 10,
+      "country_name": "China",
+      "continent": "Asia",
+      "currency": "CNY"
+    }
+  },
+  {
+    "similarity_score": 0.4189,
+    "data": {
+      "country_id": 3,
+      "country_name": "United Kingdom",
+      "continent": "Europe",
+      "currency": "GBP"
+    }
+  },
+  {
+    "similarity_score": 0.4136,
+    "data": {
+      "country_id": 4,
+      "country_name": "Germany",
+      "continent": "Europe",
+      "currency": "EUR"
+    }
+  },
+  {
+    "similarity_score": 0.413,
+    "data": {
+      "country_id": 15,
+      "country_name": "South Korea",
+      "continent": "Asia",
+      "currency": "KRW"
+    }
+  },
+  {
+    "similarity_score": 0.4117,
+    "data": {
+      "country_id": 14,
+      "country_name": "Netherlands",
+      "continent": "Europe",
+      "currency": "EUR"
+    }
+  }
+]
+
+tehir segment:
+[
+  {
+    "similarity_score": 0.3782,
+    "data": {
+      "customer_id": 617,
+      "first_name": "Stephanie",
+      "last_name": "Lopez",
+      "gender": "Male",
+      "birth_date": "2005-02-07",
+      "email": "user617@email.com",
+      "phone": "+1-210-202-3525",
+      "registration_date": "2020-07-14",
+      "country_id": 8,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3782,
+    "data": {
+      "customer_id": 159,
+      "first_name": "Anthony",
+      "last_name": "Rodriguez",
+      "gender": "Female",
+      "birth_date": "2024-12-31",
+      "email": "user159@email.com",
+      "phone": "+1-530-850-1049",
+      "registration_date": "2021-06-25",
+      "country_id": 14,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3779,
+    "data": {
+      "customer_id": 308,
+      "first_name": "Lisa",
+      "last_name": "Miller",
+      "gender": "Female",
+      "birth_date": "1988-06-10",
+      "email": "user308@email.com",
+      "phone": "+1-055-158-6490",
+      "registration_date": "2020-06-12",
+      "country_id": 15,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3772,
+    "data": {
+      "customer_id": 219,
+      "first_name": "Robert",
+      "last_name": "Jackson",
+      "gender": "Other",
+      "birth_date": "2027-08-25",
+      "email": "user219@email.com",
+      "phone": "+1-516-591-0329",
+      "registration_date": "2021-07-30",
+      "country_id": 13,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3769,
+    "data": {
+      "customer_id": 403,
+      "first_name": "Jane",
+      "last_name": "Lopez",
+      "gender": "Other",
+      "birth_date": "2028-11-21",
+      "email": "user403@email.com",
+      "phone": "+1-774-963-0258",
+      "registration_date": "2022-12-13",
+      "country_id": 6,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3769,
+    "data": {
+      "customer_id": 96,
+      "first_name": "William",
+      "last_name": "Wilson",
+      "gender": "Female",
+      "birth_date": "2021-05-16",
+      "email": "user96@email.com",
+      "phone": "+1-170-640-1286",
+      "registration_date": "2020-09-25",
+      "country_id": 9,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3765,
+    "data": {
+      "customer_id": 380,
+      "first_name": "Christopher",
+      "last_name": "Thomas",
+      "gender": "Male",
+      "birth_date": "2023-11-14",
+      "email": "user380@email.com",
+      "phone": "+1-718-605-8043",
+      "registration_date": "2023-03-18",
+      "country_id": 9,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3764,
+    "data": {
+      "customer_id": 798,
+      "first_name": "Sarah",
+      "last_name": "Rodriguez",
+      "gender": "Male",
+      "birth_date": "2017-12-17",
+      "email": "user798@email.com",
+      "phone": "+1-027-945-6891",
+      "registration_date": "2020-05-07",
+      "country_id": 14,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3762,
+    "data": {
+      "customer_id": 225,
+      "first_name": "Stephanie",
+      "last_name": "Smith",
+      "gender": "Male",
+      "birth_date": "1999-06-04",
+      "email": "user225@email.com",
+      "phone": "+1-123-228-1762",
+      "registration_date": "2020-01-24",
+      "country_id": 7,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3762,
+    "data": {
+      "customer_id": 271,
+      "first_name": "Daniel",
+      "last_name": "Davis",
+      "gender": "Other",
+      "birth_date": "2013-03-17",
+      "email": "user271@email.com",
+      "phone": "+1-015-545-9116",
+      "registration_date": "2021-11-01",
+      "country_id": 13,
+      "segment": "Premium"
+    }
+  }
+]
+
+Give me a table of custmers registred in Germny with tehir segmnt and phone numbr:
+[
+  {
+    "similarity_score": 0.427,
+    "data": {
+      "customer_id": 410,
+      "first_name": "Michael",
+      "last_name": "Garcia",
+      "gender": "Male",
+      "birth_date": "1983-03-27",
+      "email": "user410@email.com",
+      "phone": "+1-921-880-4238",
+      "registration_date": "2020-11-30",
+      "country_id": 9,
+      "segment": "Standard"
+    }
+  },
+  {
+    "similarity_score": 0.427,
+    "data": {
+      "customer_id": 304,
+      "first_name": "Stephanie",
+      "last_name": "Gonzalez",
+      "gender": "Female",
+      "birth_date": "1993-05-02",
+      "email": "user304@email.com",
+      "phone": "+1-710-219-5906",
+      "registration_date": "2020-05-06",
+      "country_id": 2,
+      "segment": "Standard"
+    }
+  },
+  {
+    "similarity_score": 0.4249,
+    "data": {
+      "customer_id": 800,
+      "first_name": "Stephanie",
+      "last_name": "Davis",
+      "gender": "Female",
+      "birth_date": "2000-07-22",
+      "email": "user800@email.com",
+      "phone": "+1-700-375-6517",
+      "registration_date": "2021-12-01",
+      "country_id": 3,
+      "segment": "Standard"
+    }
+  },
+  {
+    "similarity_score": 0.4244,
+    "data": {
+      "category_id": 1,
+      "category_name": "Smartphones",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.4237,
+    "data": {
+      "customer_id": 670,
+      "first_name": "Michael",
+      "last_name": "Lopez",
+      "gender": "Male",
+      "birth_date": "1995-06-06",
+      "email": "user670@email.com",
+      "phone": "+1-313-570-6355",
+      "registration_date": "2021-07-02",
+      "country_id": 3,
+      "segment": "VIP"
+    }
+  },
+  {
+    "similarity_score": 0.4236,
+    "data": {
+      "customer_id": 161,
+      "first_name": "Jane",
+      "last_name": "Moore",
+      "gender": "Other",
+      "birth_date": "1977-07-23",
+      "email": "user161@email.com",
+      "phone": "+1-298-333-1737",
+      "registration_date": "2023-09-07",
+      "country_id": 4,
+      "segment": "Standard"
+    }
+  },
+  {
+    "similarity_score": 0.4235,
+    "data": {
+      "customer_id": 978,
+      "first_name": "William",
+      "last_name": "Jones",
+      "gender": "Other",
+      "birth_date": "2003-11-03",
+      "email": "user978@email.com",
+      "phone": "+1-959-787-0145",
+      "registration_date": "2022-03-17",
+      "country_id": 7,
+      "segment": "Basic"
+    }
+  },
+  {
+    "similarity_score": 0.4235,
+    "data": {
+      "customer_id": 292,
+      "first_name": "Stephanie",
+      "last_name": "Martin",
+      "gender": "Female",
+      "birth_date": "2009-02-09",
+      "email": "user292@email.com",
+      "phone": "+1-280-433-9116",
+      "registration_date": "2023-09-03",
+      "country_id": 1,
+      "segment": "Standard"
+    }
+  },
+  {
+    "similarity_score": 0.4232,
+    "data": {
+      "customer_id": 823,
+      "first_name": "Jennifer",
+      "last_name": "Rodriguez",
+      "gender": "Female",
+      "birth_date": "2021-12-07",
+      "email": "user823@email.com",
+      "phone": "+1-910-799-7306",
+      "registration_date": "2023-09-24",
+      "country_id": 10,
+      "segment": "Standard"
+    }
+  },
+  {
+    "similarity_score": 0.4231,
+    "data": {
+      "customer_id": 879,
+      "first_name": "Robert",
+      "last_name": "Taylor",
+      "gender": "Female",
+      "birth_date": "1989-12-21",
+      "email": "user879@email.com",
+      "phone": "+1-160-251-1737",
+      "registration_date": "2020-05-17",
+      "country_id": 10,
+      "segment": "Basic"
+    }
+  }
+]
+
+
+================================================================================
+📋 STEP: RESOLVABILITY_CHECK
+================================================================================
+⏱️  Duration: 3.364508867263794s
+✅ Success: True
+🎯 Resolvable: True
+💬 Message: Yes, the data needed to answer your question is available in the database.  We can construct a query to retrieve the requested information.
+🧠 Reasoning: The `dim_customer` table contains the customer's segment (`segment`) and phone number (`phone`).  The `dim_customer` table also has a foreign key relationship to `dim_country` via `country_id`.  Therefore, we can join `dim_customer` with `dim_country` to filter for customers registered in Germany (`country_name = 'Germany'`). The resulting query will return a table with the customer's segment and phone number for those registered in Germany.  The FAISS search results confirm the existence of the relevant data, including a record for Germany in `dim_country` and customer segments and phone numbers in `dim_customer`.  Even minor typos in the question ("Germny," "tehir") can be reasonably
+
+
+================================================================================
+🤖 GEMINI INTERACTION: RESOLVABILITY_CHECK
+================================================================================
+📤 PROMPT:
+
+# Database Query Resolvability Analysis
+
+You are an expert PostgreSQL data warehouse analyst. Your task is to analyze whether the user's question can be resolved using the available data warehouse schema and data.
+
+## CRITICAL: Be REASONABLE and GENEROUS in your assessment. Only mark as unresolvable if you are ABSOLUTELY CERTAIN the data cannot be found.
+
+## User Question:
+Give me a table of custmers registred in Germny with tehir segmnt and phone numbr
+
+
+## Analysis Instructions:
+
+1. **Thoroughly examine** the schema for relevant tables, columns, and relationships
+2. **Look for ANY possible way** to answer the question, even if it requires joins or transformations
+3. **Consider synonyms and variations** (e.g., "sales" = "revenue", "amount", "total")
+4. **Be flexible with geographic terms** (e.g., "India" might be in country_name, region, or store_location)
+5. **Consider time-based queries** (e.g., "2023" can be extracted from date columns)
+6. **Look for category/product relationships** (e.g., "laptop category" might be in category_name or product descriptions)
+
+## RESOLVABILITY RULES:
+
+**Mark as RESOLVABLE if ANY of these are true:**
+- Question asks for data that exists in any table (even if requires joins)
+- Question can be answered with reasonable data transformations
+- You see potential solutions even if uncertain about exact implementation
+- Question uses common business terms (sales, customers, products, etc.)
+- Geographic/time filters can be applied to existing data
+
+**ONLY mark as UNRESOLVABLE if:**
+- Question asks for completely non-existent data types (e.g., "weather data" in sales database)
+- Required operations are fundamentally impossible with current schema
+- Question is completely outside the domain of the database
+
+## Response Format (EXACT):
+```
+RESOLVABLE: yes/no
+MESSAGE: [Friendly explanation of why it is or isn't resolvable]
+REASONING: [Detailed technical reasoning for your decision]
+```
+
+## Examples:
+- If asking for "customer sales" and you have customer and sales tables → RESOLVABLE: yes
+- If asking for "sales by category" and you have sales + category tables → RESOLVABLE: yes
+- If asking for "revenue by region" and you have sales + store/country tables → RESOLVABLE: yes
+- If asking for "weather data" but schema only has sales data → RESOLVABLE: no
+
+## Aditional detail:
+- In the bottom section of the schema, there are paths from tables to other tables that can help identify if there’s a way to reach additional data. Use these paths as guidance to determine resolvability.
+
+## fiass and schema:
+
+- Database Schema:
+# Database Schema: dataware_test
+**Extracted:** 2025-08-21 15:20:29
+
+## Overview
+- **Total Tables:** 17
+
+## Table of Contents
+- [Tables](#tables)
+- [Relationship Paths](#relationship-paths)
+
+## Tables
+
+### `public.dim_campaign`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `campaign_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `campaign_name` | text | ✓ |
+| `start_date` | date | ✓ |
+| `end_date` | date | ✓ |
+| `platform` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_category`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `category_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `category_name` | text | ✓ |
+| `department` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_country`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `country_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `country_name` | text | ✓ |
+| `continent` | text | ✓ |
+| `currency` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_customer`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `customer_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `country_id` | integer | `dim_country.country_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `first_name` | text | ✓ |
+| `last_name` | text | ✓ |
+| `gender` | text | ✓ |
+| `birth_date` | date | ✓ |
+| `email` | text | ✓ |
+| `phone` | text | ✓ |
+| `registration_date` | date | ✓ |
+| `segment` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_date`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `date_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `full_date` | date | ✗ |
+| `day` | integer | ✓ |
+| `week` | integer | ✓ |
+| `month` | integer | ✓ |
+| `month_name` | text | ✓ |
+| `quarter` | integer | ✓ |
+| `year` | integer | ✓ |
+| `is_weekend` | boolean | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_device`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `device_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `device_type` | text | ✓ |
+| `os` | text | ✓ |
+| `browser` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_payment_method`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `payment_method_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `method_name` | text | ✓ |
+| `provider` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_product`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `product_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `category_id` | integer | `dim_category.category_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `product_name` | text | ✓ |
+| `sku` | text | ✓ |
+| `brand` | text | ✓ |
+| `cost_price` | numeric | ✓ |
+| `selling_price` | numeric | ✓ |
+| `is_active` | boolean | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_shipping`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `shipping_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `shipping_method` | text | ✓ |
+| `carrier` | text | ✓ |
+| `shipping_speed` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_store`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `store_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `store_name` | text | ✓ |
+| `store_type` | text | ✓ |
+| `location` | text | ✓ |
+| `region` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_inventory`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `inventory_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+| `product_id` | integer | `dim_product.product_id` | ✓ |
+| `store_id` | integer | `dim_store.store_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `stock_level` | integer | ✓ |
+| `restock_flag` | boolean | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_marketing`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `marketing_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+| `campaign_id` | integer | `dim_campaign.campaign_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `impressions` | integer | ✓ |
+| `clicks` | integer | ✓ |
+| `conversions` | integer | ✓ |
+| `spend` | numeric | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_payments`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `payment_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `sale_id` | integer | `fact_sales.sale_id` | ✓ |
+| `payment_method_id` | integer | `dim_payment_method.payment_method_id` | ✓ |
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `status` | text | ✓ |
+| `transaction_fee` | numeric | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_returns`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `return_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `sale_id` | integer | `fact_sales.sale_id` | ✓ |
+| `return_date_id` | integer | `dim_date.date_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `reason` | text | ✓ |
+| `refund_amount` | numeric | ✓ |
+| `is_fraud` | boolean | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_sales`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `sale_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+| `customer_id` | integer | `dim_customer.customer_id` | ✓ |
+| `product_id` | integer | `dim_product.product_id` | ✓ |
+| `store_id` | integer | `dim_store.store_id` | ✓ |
+| `shipping_id` | integer | `dim_shipping.shipping_id` | ✓ |
+| `payment_method_id` | integer | `dim_payment_method.payment_method_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `quantity` | integer | ✓ |
+| `unit_price` | numeric | ✓ |
+| `total_amount` | numeric | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_traffic`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `traffic_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+| `customer_id` | integer | `dim_customer.customer_id` | ✓ |
+| `device_id` | integer | `dim_device.device_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `page_visited` | text | ✓ |
+| `duration_seconds` | integer | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.schema_metadata`
+
+#### Columns
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `table_name` | text | ✗ |
+| `column_name` | text | ✓ |
+| `description` | text | ✗ |
+| `metadata_type` | text | ✓ |
+
+---
+
+## Relationship Paths
+
+Pre-calculated paths between all tables for query optimization.
+
+### From `dim_campaign`
+
+| Destination | Path |
+|-------------|------|
+| `dim_date` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `)` |
+| `public.fact_inventory` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` campaign_id `)` |
+| `public.fact_payments` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_category`
+
+| Destination | Path |
+|-------------|------|
+| `public.dim_product` | `dim_category(` category_id `) → `public.dim_product(` category_id `)` |
+
+### From `dim_country`
+
+| Destination | Path |
+|-------------|------|
+| `public.dim_customer` | `dim_country(` country_id `) → `public.dim_customer(` country_id `)` |
+
+### From `dim_customer`
+
+| Destination | Path |
+|-------------|------|
+| `dim_date` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `dim_customer(` customer_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `dim_customer(` customer_id `) → `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `dim_customer(` customer_id `) → `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `dim_customer(` customer_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `dim_customer(` customer_id `) → `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `public.fact_inventory` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_customer(` customer_id `) → `public.fact_sales(` customer_id `)` |
+| `public.fact_traffic` | `dim_customer(` customer_id `) → `public.fact_traffic(` customer_id `)` |
+
+### From `dim_date`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `dim_date(` date_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_device` | `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `dim_date(` date_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `dim_date(` date_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `dim_date(` date_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_device`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_device(` device_id `) → `public.fact_traffic(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `)` |
+| `public.fact_inventory` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `dim_device(` device_id `) → `public.fact_traffic(` device_id `)` |
+
+### From `dim_payment_method`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `)` |
+| `dim_product` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` payment_method_id `)` |
+| `public.fact_returns` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `) → `public.fact_returns(` sale_id `)` |
+| `public.fact_sales` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` payment_method_id `)` |
+| `public.fact_traffic` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_product`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_product(` product_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `)` |
+| `dim_payment_method` | `dim_product(` product_id `) → `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_shipping` | `dim_product(` product_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `dim_product(` product_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `public.fact_inventory` | `dim_product(` product_id `) → `public.fact_inventory(` product_id `)` |
+| `public.fact_marketing` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_product(` product_id `) → `public.fact_sales(` product_id `)` |
+| `public.fact_traffic` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_shipping`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_shipping(` shipping_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `)` |
+| `dim_payment_method` | `dim_shipping(` shipping_id `) → `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `dim_shipping(` shipping_id `) → `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_store` | `dim_shipping(` shipping_id `) → `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `public.fact_inventory` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_shipping(` shipping_id `) → `public.fact_sales(` shipping_id `)` |
+| `public.fact_traffic` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_store`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_store(` store_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `)` |
+| `dim_payment_method` | `dim_store(` store_id `) → `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `dim_store(` store_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `dim_store(` store_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `public.fact_inventory` | `dim_store(` store_id `) → `public.fact_inventory(` store_id `)` |
+| `public.fact_marketing` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_store(` store_id `) → `public.fact_sales(` store_id `)` |
+| `public.fact_traffic` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `fact_sales`
+
+| Destination | Path |
+|-------------|------|
+| `dim_date` | `fact_sales(` sale_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `)` |
+| `dim_payment_method` | `fact_sales(` sale_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `public.fact_inventory` | `fact_sales(` sale_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `fact_sales(` sale_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `fact_sales(` sale_id `) → `public.fact_payments(` sale_id `)` |
+| `public.fact_returns` | `fact_sales(` sale_id `) → `public.fact_returns(` sale_id `)` |
+| `public.fact_sales` | `fact_sales(` sale_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` payment_method_id `)` |
+| `public.fact_traffic` | `fact_sales(` sale_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.dim_customer`
+
+| Destination | Path |
+|-------------|------|
+| `dim_country` | `public.dim_customer(` country_id `) → `dim_country(` country_id `)` |
+
+### From `public.dim_product`
+
+| Destination | Path |
+|-------------|------|
+| `dim_category` | `public.dim_product(` category_id `) → `dim_category(` category_id `)` |
+
+### From `public.fact_inventory`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_marketing` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_marketing`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_payments` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_payments`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_payments(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_returns` | `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `) → `public.fact_returns(` sale_id `)` |
+| `public.fact_sales` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` payment_method_id `)` |
+| `public.fact_traffic` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_returns`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_returns(` sale_id `) → `fact_sales(` sale_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_returns(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `public.fact_returns(` sale_id `) → `fact_sales(` sale_id `) → `public.fact_payments(` sale_id `)` |
+| `public.fact_sales` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_sales`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_sales(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_traffic` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_traffic`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_traffic(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+
+---
+
+
+- Available Data Evidence (from FAISS search):
+Germny country:
+[
+  {
+    "similarity_score": 0.4365,
+    "data": {
+      "country_id": 11,
+      "country_name": "Mexico",
+      "continent": "North America",
+      "currency": "MXN"
+    }
+  },
+  {
+    "similarity_score": 0.4344,
+    "data": {
+      "country_id": 6,
+      "country_name": "Japan",
+      "continent": "Asia",
+      "currency": "JPY"
+    }
+  },
+  {
+    "similarity_score": 0.429,
+    "data": {
+      "country_id": 8,
+      "country_name": "Brazil",
+      "continent": "South America",
+      "currency": "BRL"
+    }
+  },
+  {
+    "similarity_score": 0.4259,
+    "data": {
+      "country_id": 2,
+      "country_name": "Canada",
+      "continent": "North America",
+      "currency": "CAD"
+    }
+  },
+  {
+    "similarity_score": 0.4257,
+    "data": {
+      "country_id": 1,
+      "country_name": "United States",
+      "continent": "North America",
+      "currency": "USD"
+    }
+  },
+  {
+    "similarity_score": 0.4254,
+    "data": {
+      "country_id": 10,
+      "country_name": "China",
+      "continent": "Asia",
+      "currency": "CNY"
+    }
+  },
+  {
+    "similarity_score": 0.4189,
+    "data": {
+      "country_id": 3,
+      "country_name": "United Kingdom",
+      "continent": "Europe",
+      "currency": "GBP"
+    }
+  },
+  {
+    "similarity_score": 0.4136,
+    "data": {
+      "country_id": 4,
+      "country_name": "Germany",
+      "continent": "Europe",
+      "currency": "EUR"
+    }
+  },
+  {
+    "similarity_score": 0.413,
+    "data": {
+      "country_id": 15,
+      "country_name": "South Korea",
+      "continent": "Asia",
+      "currency": "KRW"
+    }
+  },
+  {
+    "similarity_score": 0.4117,
+    "data": {
+      "country_id": 14,
+      "country_name": "Netherlands",
+      "continent": "Europe",
+      "currency": "EUR"
+    }
+  }
+]
+
+tehir segment:
+[
+  {
+    "similarity_score": 0.3782,
+    "data": {
+      "customer_id": 617,
+      "first_name": "Stephanie",
+      "last_name": "Lopez",
+      "gender": "Male",
+      "birth_date": "2005-02-07",
+      "email": "user617@email.com",
+      "phone": "+1-210-202-3525",
+      "registration_date": "2020-07-14",
+      "country_id": 8,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3782,
+    "data": {
+      "customer_id": 159,
+      "first_name": "Anthony",
+      "last_name": "Rodriguez",
+      "gender": "Female",
+      "birth_date": "2024-12-31",
+      "email": "user159@email.com",
+      "phone": "+1-530-850-1049",
+      "registration_date": "2021-06-25",
+      "country_id": 14,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3779,
+    "data": {
+      "customer_id": 308,
+      "first_name": "Lisa",
+      "last_name": "Miller",
+      "gender": "Female",
+      "birth_date": "1988-06-10",
+      "email": "user308@email.com",
+      "phone": "+1-055-158-6490",
+      "registration_date": "2020-06-12",
+      "country_id": 15,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3772,
+    "data": {
+      "customer_id": 219,
+      "first_name": "Robert",
+      "last_name": "Jackson",
+      "gender": "Other",
+      "birth_date": "2027-08-25",
+      "email": "user219@email.com",
+      "phone": "+1-516-591-0329",
+      "registration_date": "2021-07-30",
+      "country_id": 13,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3769,
+    "data": {
+      "customer_id": 403,
+      "first_name": "Jane",
+      "last_name": "Lopez",
+      "gender": "Other",
+      "birth_date": "2028-11-21",
+      "email": "user403@email.com",
+      "phone": "+1-774-963-0258",
+      "registration_date": "2022-12-13",
+      "country_id": 6,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3769,
+    "data": {
+      "customer_id": 96,
+      "first_name": "William",
+      "last_name": "Wilson",
+      "gender": "Female",
+      "birth_date": "2021-05-16",
+      "email": "user96@email.com",
+      "phone": "+1-170-640-1286",
+      "registration_date": "2020-09-25",
+      "country_id": 9,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3765,
+    "data": {
+      "customer_id": 380,
+      "first_name": "Christopher",
+      "last_name": "Thomas",
+      "gender": "Male",
+      "birth_date": "2023-11-14",
+      "email": "user380@email.com",
+      "phone": "+1-718-605-8043",
+      "registration_date": "2023-03-18",
+      "country_id": 9,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3764,
+    "data": {
+      "customer_id": 798,
+      "first_name": "Sarah",
+      "last_name": "Rodriguez",
+      "gender": "Male",
+      "birth_date": "2017-12-17",
+      "email": "user798@email.com",
+      "phone": "+1-027-945-6891",
+      "registration_date": "2020-05-07",
+      "country_id": 14,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3762,
+    "data": {
+      "customer_id": 225,
+      "first_name": "Stephanie",
+      "last_name": "Smith",
+      "gender": "Male",
+      "birth_date": "1999-06-04",
+      "email": "user225@email.com",
+      "phone": "+1-123-228-1762",
+      "registration_date": "2020-01-24",
+      "country_id": 7,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3762,
+    "data": {
+      "customer_id": 271,
+      "first_name": "Daniel",
+      "last_name": "Davis",
+      "gender": "Other",
+      "birth_date": "2013-03-17",
+      "email": "user271@email.com",
+      "phone": "+1-015-545-9116",
+      "registration_date": "2021-11-01",
+      "country_id": 13,
+      "segment": "Premium"
+    }
+  }
+]
+
+Give me a table of custmers registred in Germny with tehir segmnt and phone numbr:
+[
+  {
+    "similarity_score": 0.427,
+    "data": {
+      "customer_id": 410,
+      "first_name": "Michael",
+      "last_name": "Garcia",
+      "gender": "Male",
+      "birth_date": "1983-03-27",
+      "email": "user410@email.com",
+      "phone": "+1-921-880-4238",
+      "registration_date": "2020-11-30",
+      "country_id": 9,
+      "segment": "Standard"
+    }
+  },
+  {
+    "similarity_score": 0.427,
+    "data": {
+      "customer_id": 304,
+      "first_name": "Stephanie",
+      "last_name": "Gonzalez",
+      "gender": "Female",
+      "birth_date": "1993-05-02",
+      "email": "user304@email.com",
+      "phone": "+1-710-219-5906",
+      "registration_date": "2020-05-06",
+      "country_id": 2,
+      "segment": "Standard"
+    }
+  },
+  {
+    "similarity_score": 0.4249,
+    "data": {
+      "customer_id": 800,
+      "first_name": "Stephanie",
+      "last_name": "Davis",
+      "gender": "Female",
+      "birth_date": "2000-07-22",
+      "email": "user800@email.com",
+      "phone": "+1-700-375-6517",
+      "registration_date": "2021-12-01",
+      "country_id": 3,
+      "segment": "Standard"
+    }
+  },
+  {
+    "similarity_score": 0.4244,
+    "data": {
+      "category_id": 1,
+      "category_name": "Smartphones",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.4237,
+    "data": {
+      "customer_id": 670,
+      "first_name": "Michael",
+      "last_name": "Lopez",
+      "gender": "Male",
+      "birth_date": "1995-06-06",
+      "email": "user670@email.com",
+      "phone": "+1-313-570-6355",
+      "registration_date": "2021-07-02",
+      "country_id": 3,
+      "segment": "VIP"
+    }
+  },
+  {
+    "similarity_score": 0.4236,
+    "data": {
+      "customer_id": 161,
+      "first_name": "Jane",
+      "last_name": "Moore",
+      "gender": "Other",
+      "birth_date": "1977-07-23",
+      "email": "user161@email.com",
+      "phone": "+1-298-333-1737",
+      "registration_date": "2023-09-07",
+      "country_id": 4,
+      "segment": "Standard"
+    }
+  },
+  {
+    "similarity_score": 0.4235,
+    "data": {
+      "customer_id": 978,
+      "first_name": "William",
+      "last_name": "Jones",
+      "gender": "Other",
+      "birth_date": "2003-11-03",
+      "email": "user978@email.com",
+      "phone": "+1-959-787-0145",
+      "registration_date": "2022-03-17",
+      "country_id": 7,
+      "segment": "Basic"
+    }
+  },
+  {
+    "similarity_score": 0.4235,
+    "data": {
+      "customer_id": 292,
+      "first_name": "Stephanie",
+      "last_name": "Martin",
+      "gender": "Female",
+      "birth_date": "2009-02-09",
+      "email": "user292@email.com",
+      "phone": "+1-280-433-9116",
+      "registration_date": "2023-09-03",
+      "country_id": 1,
+      "segment": "Standard"
+    }
+  },
+  {
+    "similarity_score": 0.4232,
+    "data": {
+      "customer_id": 823,
+      "first_name": "Jennifer",
+      "last_name": "Rodriguez",
+      "gender": "Female",
+      "birth_date": "2021-12-07",
+      "email": "user823@email.com",
+      "phone": "+1-910-799-7306",
+      "registration_date": "2023-09-24",
+      "country_id": 10,
+      "segment": "Standard"
+    }
+  },
+  {
+    "similarity_score": 0.4231,
+    "data": {
+      "customer_id": 879,
+      "first_name": "Robert",
+      "last_name": "Taylor",
+      "gender": "Female",
+      "birth_date": "1989-12-21",
+      "email": "user879@email.com",
+      "phone": "+1-160-251-1737",
+      "registration_date": "2020-05-17",
+      "country_id": 10,
+      "segment": "Basic"
+    }
+  }
+]
+
+**IMPORTANT: When in doubt, lean toward RESOLVABLE. It's better to try and fail than to reject a potentially valid query.**
+
+
+📥 RESPONSE:
+```
+RESOLVABLE: yes
+MESSAGE: Yes, the data needed to answer your question is available in the database.  We can construct a query to retrieve the requested information.
+REASONING:The `dim_customer` table contains the customer's segment (`segment`) and phone number (`phone`).  The `dim_customer` table also has a foreign key relationship to `dim_country` via `country_id`.  Therefore, we can join `dim_customer` with `dim_country` to filter for customers registered in Germany (`country_name = 'Germany'`). The resulting query will return a table with the customer's segment and phone number for those registered in Germany.  The FAISS search results confirm the existence of the relevant data, including a record for Germany in `dim_country` and customer segments and phone numbers in `dim_customer`.  Even minor typos in the question ("Germny," "tehir") can be reasonably
+
+
+================================================================================
+📋 STEP: GENERATE_INITIAL_QUERY
+================================================================================
+⏱️  Duration: 2.1252241134643555s
+✅ Success: True
+📝 SQL Query: SELECT
+  first_name,
+  last_name,
+  segment,
+  phone
+FROM
+  dim_customer
+WHERE
+  country_id = (
+    SELECT
+      country_id
+    FROM
+      dim_country
+    WHERE
+      country_name = 'Germany'
+  );
+🤖 Gemini Response: ```sql
+SELECT
+  first_name,
+  last_name,
+  segment,
+  phone
+FROM
+  dim_customer
+WHERE
+  country_id = (
+    SELECT
+      country_id
+    FROM
+      dim_country
+    WHERE
+      country_name = 'Germany'
+  );
+```
+
+
+================================================================================
+🤖 GEMINI INTERACTION: GENERATE_INITIAL_QUERY
+================================================================================
+📤 PROMPT:
+
+# First generated query
+
+You are an expert PostgreSQL data warehouse query generator. Your task is to generate teh right query using the available data warehouse schema and data.
+
+Generate ONLY the SQL query for the following request. We have already confirmed this query is resolvable.
+
+INSTRUCTIONS:
+- Use the FAISS results to find correct spellings for any misspelled data values in the user query
+- Generate valid Postgres SQL syntax
+- Use the provided schema to construct the correct query. - In the bottom section of the schema, there are paths from tables to other tables that can help identify if there’s a way to reach additional data. Use these paths as guidance to determine resolvability.
+- You MUST provide a working SQL solution - no explanations or additional text
+- Return ONLY the SQL query, nothing else
+
+User Query: Give me a table of custmers registred in Germny with tehir segmnt and phone numbr
+
+Database Schema: # Database Schema: dataware_test
+**Extracted:** 2025-08-21 15:20:29
+
+## Overview
+- **Total Tables:** 17
+
+## Table of Contents
+- [Tables](#tables)
+- [Relationship Paths](#relationship-paths)
+
+## Tables
+
+### `public.dim_campaign`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `campaign_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `campaign_name` | text | ✓ |
+| `start_date` | date | ✓ |
+| `end_date` | date | ✓ |
+| `platform` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_category`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `category_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `category_name` | text | ✓ |
+| `department` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_country`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `country_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `country_name` | text | ✓ |
+| `continent` | text | ✓ |
+| `currency` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_customer`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `customer_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `country_id` | integer | `dim_country.country_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `first_name` | text | ✓ |
+| `last_name` | text | ✓ |
+| `gender` | text | ✓ |
+| `birth_date` | date | ✓ |
+| `email` | text | ✓ |
+| `phone` | text | ✓ |
+| `registration_date` | date | ✓ |
+| `segment` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_date`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `date_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `full_date` | date | ✗ |
+| `day` | integer | ✓ |
+| `week` | integer | ✓ |
+| `month` | integer | ✓ |
+| `month_name` | text | ✓ |
+| `quarter` | integer | ✓ |
+| `year` | integer | ✓ |
+| `is_weekend` | boolean | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_device`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `device_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `device_type` | text | ✓ |
+| `os` | text | ✓ |
+| `browser` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_payment_method`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `payment_method_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `method_name` | text | ✓ |
+| `provider` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_product`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `product_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `category_id` | integer | `dim_category.category_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `product_name` | text | ✓ |
+| `sku` | text | ✓ |
+| `brand` | text | ✓ |
+| `cost_price` | numeric | ✓ |
+| `selling_price` | numeric | ✓ |
+| `is_active` | boolean | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_shipping`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `shipping_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `shipping_method` | text | ✓ |
+| `carrier` | text | ✓ |
+| `shipping_speed` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.dim_store`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `store_id` | integer | ✗ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `store_name` | text | ✓ |
+| `store_type` | text | ✓ |
+| `location` | text | ✓ |
+| `region` | text | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_inventory`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `inventory_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+| `product_id` | integer | `dim_product.product_id` | ✓ |
+| `store_id` | integer | `dim_store.store_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `stock_level` | integer | ✓ |
+| `restock_flag` | boolean | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_marketing`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `marketing_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+| `campaign_id` | integer | `dim_campaign.campaign_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `impressions` | integer | ✓ |
+| `clicks` | integer | ✓ |
+| `conversions` | integer | ✓ |
+| `spend` | numeric | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_payments`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `payment_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `sale_id` | integer | `fact_sales.sale_id` | ✓ |
+| `payment_method_id` | integer | `dim_payment_method.payment_method_id` | ✓ |
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `status` | text | ✓ |
+| `transaction_fee` | numeric | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_returns`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `return_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `sale_id` | integer | `fact_sales.sale_id` | ✓ |
+| `return_date_id` | integer | `dim_date.date_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `reason` | text | ✓ |
+| `refund_amount` | numeric | ✓ |
+| `is_fraud` | boolean | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_sales`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `sale_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+| `customer_id` | integer | `dim_customer.customer_id` | ✓ |
+| `product_id` | integer | `dim_product.product_id` | ✓ |
+| `store_id` | integer | `dim_store.store_id` | ✓ |
+| `shipping_id` | integer | `dim_shipping.shipping_id` | ✓ |
+| `payment_method_id` | integer | `dim_payment_method.payment_method_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `quantity` | integer | ✓ |
+| `unit_price` | numeric | ✓ |
+| `total_amount` | numeric | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.fact_traffic`
+
+#### Columns
+
+**Primary Keys:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `traffic_id` | integer | ✗ |
+
+**Foreign Keys:**
+
+| Column | Type | References | Nullable |
+|--------|------|------------|----------|
+| `date_id` | integer | `dim_date.date_id` | ✓ |
+| `customer_id` | integer | `dim_customer.customer_id` | ✓ |
+| `device_id` | integer | `dim_device.device_id` | ✓ |
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `page_visited` | text | ✓ |
+| `duration_seconds` | integer | ✓ |
+| `embedding` | USER-DEFINED | ✓ |
+
+---
+
+### `public.schema_metadata`
+
+#### Columns
+
+**Other Columns:**
+
+| Column | Type | Nullable |
+|--------|------|----------|
+| `table_name` | text | ✗ |
+| `column_name` | text | ✓ |
+| `description` | text | ✗ |
+| `metadata_type` | text | ✓ |
+
+---
+
+## Relationship Paths
+
+Pre-calculated paths between all tables for query optimization.
+
+### From `dim_campaign`
+
+| Destination | Path |
+|-------------|------|
+| `dim_date` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `)` |
+| `public.fact_inventory` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` campaign_id `)` |
+| `public.fact_payments` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `dim_campaign(` campaign_id `) → `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_category`
+
+| Destination | Path |
+|-------------|------|
+| `public.dim_product` | `dim_category(` category_id `) → `public.dim_product(` category_id `)` |
+
+### From `dim_country`
+
+| Destination | Path |
+|-------------|------|
+| `public.dim_customer` | `dim_country(` country_id `) → `public.dim_customer(` country_id `)` |
+
+### From `dim_customer`
+
+| Destination | Path |
+|-------------|------|
+| `dim_date` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `dim_customer(` customer_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `dim_customer(` customer_id `) → `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `dim_customer(` customer_id `) → `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `dim_customer(` customer_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `dim_customer(` customer_id `) → `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `public.fact_inventory` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_customer(` customer_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_customer(` customer_id `) → `public.fact_sales(` customer_id `)` |
+| `public.fact_traffic` | `dim_customer(` customer_id `) → `public.fact_traffic(` customer_id `)` |
+
+### From `dim_date`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `dim_date(` date_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_device` | `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `dim_date(` date_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `dim_date(` date_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `dim_date(` date_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_device`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_device(` device_id `) → `public.fact_traffic(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `)` |
+| `public.fact_inventory` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_device(` device_id `) → `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `dim_device(` device_id `) → `public.fact_traffic(` device_id `)` |
+
+### From `dim_payment_method`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `)` |
+| `dim_product` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` payment_method_id `)` |
+| `public.fact_returns` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `) → `public.fact_returns(` sale_id `)` |
+| `public.fact_sales` | `dim_payment_method(` payment_method_id `) → `public.fact_sales(` payment_method_id `)` |
+| `public.fact_traffic` | `dim_payment_method(` payment_method_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_product`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_product(` product_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `)` |
+| `dim_payment_method` | `dim_product(` product_id `) → `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_shipping` | `dim_product(` product_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `dim_product(` product_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `public.fact_inventory` | `dim_product(` product_id `) → `public.fact_inventory(` product_id `)` |
+| `public.fact_marketing` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_product(` product_id `) → `public.fact_sales(` product_id `)` |
+| `public.fact_traffic` | `dim_product(` product_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_shipping`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_shipping(` shipping_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `)` |
+| `dim_payment_method` | `dim_shipping(` shipping_id `) → `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `dim_shipping(` shipping_id `) → `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_store` | `dim_shipping(` shipping_id `) → `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `public.fact_inventory` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_shipping(` shipping_id `) → `public.fact_sales(` shipping_id `)` |
+| `public.fact_traffic` | `dim_shipping(` shipping_id `) → `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `dim_store`
+
+| Destination | Path |
+|-------------|------|
+| `dim_customer` | `dim_store(` store_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `)` |
+| `dim_payment_method` | `dim_store(` store_id `) → `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `dim_store(` store_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `dim_store(` store_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `public.fact_inventory` | `dim_store(` store_id `) → `public.fact_inventory(` store_id `)` |
+| `public.fact_marketing` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `dim_store(` store_id `) → `public.fact_sales(` store_id `)` |
+| `public.fact_traffic` | `dim_store(` store_id `) → `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `fact_sales`
+
+| Destination | Path |
+|-------------|------|
+| `dim_date` | `fact_sales(` sale_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `)` |
+| `dim_payment_method` | `fact_sales(` sale_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `public.fact_inventory` | `fact_sales(` sale_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `fact_sales(` sale_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `fact_sales(` sale_id `) → `public.fact_payments(` sale_id `)` |
+| `public.fact_returns` | `fact_sales(` sale_id `) → `public.fact_returns(` sale_id `)` |
+| `public.fact_sales` | `fact_sales(` sale_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` payment_method_id `)` |
+| `public.fact_traffic` | `fact_sales(` sale_id `) → `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.dim_customer`
+
+| Destination | Path |
+|-------------|------|
+| `dim_country` | `public.dim_customer(` country_id `) → `dim_country(` country_id `)` |
+
+### From `public.dim_product`
+
+| Destination | Path |
+|-------------|------|
+| `dim_category` | `public.dim_product(` category_id `) → `dim_category(` category_id `)` |
+
+### From `public.fact_inventory`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_marketing` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `public.fact_inventory(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_marketing`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_payments` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `public.fact_marketing(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_payments`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_payments(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_returns` | `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `) → `public.fact_returns(` sale_id `)` |
+| `public.fact_sales` | `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `) → `public.fact_sales(` payment_method_id `)` |
+| `public.fact_traffic` | `public.fact_payments(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_returns`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_returns(` sale_id `) → `fact_sales(` sale_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_returns(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `public.fact_returns(` sale_id `) → `fact_sales(` sale_id `) → `public.fact_payments(` sale_id `)` |
+| `public.fact_sales` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+| `public.fact_traffic` | `public.fact_returns(` return_date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_sales`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_sales(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_sales(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_sales(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_sales(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_sales(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_traffic` | `public.fact_sales(` date_id `) → `dim_date(` date_id `) → `public.fact_traffic(` date_id `)` |
+
+### From `public.fact_traffic`
+
+| Destination | Path |
+|-------------|------|
+| `dim_campaign` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` campaign_id `) → `dim_campaign(` campaign_id `)` |
+| `dim_customer` | `public.fact_traffic(` customer_id `) → `dim_customer(` customer_id `)` |
+| `dim_date` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `)` |
+| `dim_device` | `public.fact_traffic(` device_id `) → `dim_device(` device_id `)` |
+| `dim_payment_method` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` payment_method_id `) → `dim_payment_method(` payment_method_id `)` |
+| `dim_product` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` product_id `) → `dim_product(` product_id `)` |
+| `dim_shipping` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` shipping_id `) → `dim_shipping(` shipping_id `)` |
+| `dim_store` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` store_id `) → `dim_store(` store_id `)` |
+| `fact_sales` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` sale_id `) → `fact_sales(` sale_id `)` |
+| `public.fact_inventory` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_inventory(` date_id `)` |
+| `public.fact_marketing` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_marketing(` date_id `)` |
+| `public.fact_payments` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_payments(` date_id `)` |
+| `public.fact_returns` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_returns(` return_date_id `)` |
+| `public.fact_sales` | `public.fact_traffic(` date_id `) → `dim_date(` date_id `) → `public.fact_sales(` date_id `)` |
+
+---
+
+
+FAISS Search Results (corrected spellings for misspelled data values): Germny country:
+[
+  {
+    "similarity_score": 0.4365,
+    "data": {
+      "country_id": 11,
+      "country_name": "Mexico",
+      "continent": "North America",
+      "currency": "MXN"
+    }
+  },
+  {
+    "similarity_score": 0.4344,
+    "data": {
+      "country_id": 6,
+      "country_name": "Japan",
+      "continent": "Asia",
+      "currency": "JPY"
+    }
+  },
+  {
+    "similarity_score": 0.429,
+    "data": {
+      "country_id": 8,
+      "country_name": "Brazil",
+      "continent": "South America",
+      "currency": "BRL"
+    }
+  },
+  {
+    "similarity_score": 0.4259,
+    "data": {
+      "country_id": 2,
+      "country_name": "Canada",
+      "continent": "North America",
+      "currency": "CAD"
+    }
+  },
+  {
+    "similarity_score": 0.4257,
+    "data": {
+      "country_id": 1,
+      "country_name": "United States",
+      "continent": "North America",
+      "currency": "USD"
+    }
+  },
+  {
+    "similarity_score": 0.4254,
+    "data": {
+      "country_id": 10,
+      "country_name": "China",
+      "continent": "Asia",
+      "currency": "CNY"
+    }
+  },
+  {
+    "similarity_score": 0.4189,
+    "data": {
+      "country_id": 3,
+      "country_name": "United Kingdom",
+      "continent": "Europe",
+      "currency": "GBP"
+    }
+  },
+  {
+    "similarity_score": 0.4136,
+    "data": {
+      "country_id": 4,
+      "country_name": "Germany",
+      "continent": "Europe",
+      "currency": "EUR"
+    }
+  },
+  {
+    "similarity_score": 0.413,
+    "data": {
+      "country_id": 15,
+      "country_name": "South Korea",
+      "continent": "Asia",
+      "currency": "KRW"
+    }
+  },
+  {
+    "similarity_score": 0.4117,
+    "data": {
+      "country_id": 14,
+      "country_name": "Netherlands",
+      "continent": "Europe",
+      "currency": "EUR"
+    }
+  }
+]
+
+tehir segment:
+[
+  {
+    "similarity_score": 0.3782,
+    "data": {
+      "customer_id": 617,
+      "first_name": "Stephanie",
+      "last_name": "Lopez",
+      "gender": "Male",
+      "birth_date": "2005-02-07",
+      "email": "user617@email.com",
+      "phone": "+1-210-202-3525",
+      "registration_date": "2020-07-14",
+      "country_id": 8,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3782,
+    "data": {
+      "customer_id": 159,
+      "first_name": "Anthony",
+      "last_name": "Rodriguez",
+      "gender": "Female",
+      "birth_date": "2024-12-31",
+      "email": "user159@email.com",
+      "phone": "+1-530-850-1049",
+      "registration_date": "2021-06-25",
+      "country_id": 14,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3779,
+    "data": {
+      "customer_id": 308,
+      "first_name": "Lisa",
+      "last_name": "Miller",
+      "gender": "Female",
+      "birth_date": "1988-06-10",
+      "email": "user308@email.com",
+      "phone": "+1-055-158-6490",
+      "registration_date": "2020-06-12",
+      "country_id": 15,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3772,
+    "data": {
+      "customer_id": 219,
+      "first_name": "Robert",
+      "last_name": "Jackson",
+      "gender": "Other",
+      "birth_date": "2027-08-25",
+      "email": "user219@email.com",
+      "phone": "+1-516-591-0329",
+      "registration_date": "2021-07-30",
+      "country_id": 13,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3769,
+    "data": {
+      "customer_id": 403,
+      "first_name": "Jane",
+      "last_name": "Lopez",
+      "gender": "Other",
+      "birth_date": "2028-11-21",
+      "email": "user403@email.com",
+      "phone": "+1-774-963-0258",
+      "registration_date": "2022-12-13",
+      "country_id": 6,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3769,
+    "data": {
+      "customer_id": 96,
+      "first_name": "William",
+      "last_name": "Wilson",
+      "gender": "Female",
+      "birth_date": "2021-05-16",
+      "email": "user96@email.com",
+      "phone": "+1-170-640-1286",
+      "registration_date": "2020-09-25",
+      "country_id": 9,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3765,
+    "data": {
+      "customer_id": 380,
+      "first_name": "Christopher",
+      "last_name": "Thomas",
+      "gender": "Male",
+      "birth_date": "2023-11-14",
+      "email": "user380@email.com",
+      "phone": "+1-718-605-8043",
+      "registration_date": "2023-03-18",
+      "country_id": 9,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3764,
+    "data": {
+      "customer_id": 798,
+      "first_name": "Sarah",
+      "last_name": "Rodriguez",
+      "gender": "Male",
+      "birth_date": "2017-12-17",
+      "email": "user798@email.com",
+      "phone": "+1-027-945-6891",
+      "registration_date": "2020-05-07",
+      "country_id": 14,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3762,
+    "data": {
+      "customer_id": 225,
+      "first_name": "Stephanie",
+      "last_name": "Smith",
+      "gender": "Male",
+      "birth_date": "1999-06-04",
+      "email": "user225@email.com",
+      "phone": "+1-123-228-1762",
+      "registration_date": "2020-01-24",
+      "country_id": 7,
+      "segment": "Premium"
+    }
+  },
+  {
+    "similarity_score": 0.3762,
+    "data": {
+      "customer_id": 271,
+      "first_name": "Daniel",
+      "last_name": "Davis",
+      "gender": "Other",
+      "birth_date": "2013-03-17",
+      "email": "user271@email.com",
+      "phone": "+1-015-545-9116",
+      "registration_date": "2021-11-01",
+      "country_id": 13,
+      "segment": "Premium"
+    }
+  }
+]
+
+Give me a table of custmers registred in Germny with tehir segmnt and phone numbr:
+[
+  {
+    "similarity_score": 0.427,
+    "data": {
+      "customer_id": 410,
+      "first_name": "Michael",
+      "last_name": "Garcia",
+      "gender": "Male",
+      "birth_date": "1983-03-27",
+      "email": "user410@email.com",
+      "phone": "+1-921-880-4238",
+      "registration_date": "2020-11-30",
+      "country_id": 9,
+      "segment": "Standard"
+    }
+  },
+  {
+    "similarity_score": 0.427,
+    "data": {
+      "customer_id": 304,
+      "first_name": "Stephanie",
+      "last_name": "Gonzalez",
+      "gender": "Female",
+      "birth_date": "1993-05-02",
+      "email": "user304@email.com",
+      "phone": "+1-710-219-5906",
+      "registration_date": "2020-05-06",
+      "country_id": 2,
+      "segment": "Standard"
+    }
+  },
+  {
+    "similarity_score": 0.4249,
+    "data": {
+      "customer_id": 800,
+      "first_name": "Stephanie",
+      "last_name": "Davis",
+      "gender": "Female",
+      "birth_date": "2000-07-22",
+      "email": "user800@email.com",
+      "phone": "+1-700-375-6517",
+      "registration_date": "2021-12-01",
+      "country_id": 3,
+      "segment": "Standard"
+    }
+  },
+  {
+    "similarity_score": 0.4244,
+    "data": {
+      "category_id": 1,
+      "category_name": "Smartphones",
+      "department": "Electronics"
+    }
+  },
+  {
+    "similarity_score": 0.4237,
+    "data": {
+      "customer_id": 670,
+      "first_name": "Michael",
+      "last_name": "Lopez",
+      "gender": "Male",
+      "birth_date": "1995-06-06",
+      "email": "user670@email.com",
+      "phone": "+1-313-570-6355",
+      "registration_date": "2021-07-02",
+      "country_id": 3,
+      "segment": "VIP"
+    }
+  },
+  {
+    "similarity_score": 0.4236,
+    "data": {
+      "customer_id": 161,
+      "first_name": "Jane",
+      "last_name": "Moore",
+      "gender": "Other",
+      "birth_date": "1977-07-23",
+      "email": "user161@email.com",
+      "phone": "+1-298-333-1737",
+      "registration_date": "2023-09-07",
+      "country_id": 4,
+      "segment": "Standard"
+    }
+  },
+  {
+    "similarity_score": 0.4235,
+    "data": {
+      "customer_id": 978,
+      "first_name": "William",
+      "last_name": "Jones",
+      "gender": "Other",
+      "birth_date": "2003-11-03",
+      "email": "user978@email.com",
+      "phone": "+1-959-787-0145",
+      "registration_date": "2022-03-17",
+      "country_id": 7,
+      "segment": "Basic"
+    }
+  },
+  {
+    "similarity_score": 0.4235,
+    "data": {
+      "customer_id": 292,
+      "first_name": "Stephanie",
+      "last_name": "Martin",
+      "gender": "Female",
+      "birth_date": "2009-02-09",
+      "email": "user292@email.com",
+      "phone": "+1-280-433-9116",
+      "registration_date": "2023-09-03",
+      "country_id": 1,
+      "segment": "Standard"
+    }
+  },
+  {
+    "similarity_score": 0.4232,
+    "data": {
+      "customer_id": 823,
+      "first_name": "Jennifer",
+      "last_name": "Rodriguez",
+      "gender": "Female",
+      "birth_date": "2021-12-07",
+      "email": "user823@email.com",
+      "phone": "+1-910-799-7306",
+      "registration_date": "2023-09-24",
+      "country_id": 10,
+      "segment": "Standard"
+    }
+  },
+  {
+    "similarity_score": 0.4231,
+    "data": {
+      "customer_id": 879,
+      "first_name": "Robert",
+      "last_name": "Taylor",
+      "gender": "Female",
+      "birth_date": "1989-12-21",
+      "email": "user879@email.com",
+      "phone": "+1-160-251-1737",
+      "registration_date": "2020-05-17",
+      "country_id": 10,
+      "segment": "Basic"
+    }
+  }
+]
+
+DO NOT include:
+- ''', or sql just leave it like that
+- Explanations or descriptions
+- Comments (-- or /* */)
+- "Here is the query:" or similar text
+- Any other text or formatting
+
+## ## wherever you have used “%”, just make it double for sqlalchemy.cyextension.immutable probleme
+
+
+
+📥 RESPONSE:
+```sql
+SELECT
+  first_name,
+  last_name,
+  segment,
+  phone
+FROM
+  dim_customer
+WHERE
+  country_id = (
+    SELECT
+      country_id
+    FROM
+      dim_country
+    WHERE
+      country_name = 'Germany'
+  );
+```
+
+
+================================================================================
+📋 STEP: TEST_AND_VALIDATE
+================================================================================
+⏱️  Duration: 0.18149447441101074s
+✅ Success: True
+🧪 Final SQL: SELECT
+  first_name,
+  last_name,
+  segment,
+  phone
+FROM
+  dim_customer
+WHERE
+  country_id = (
+    SELECT
+      country_id
+    FROM
+      dim_country
+    WHERE
+      country_name = 'Germany'
+  );
+📊 Execution Result: {
+  "success": true,
+  "columns": [
+    "first_name",
+    "last_name",
+    "segment",
+    "phone"
+  ],
+  "row_count": 63,
+  "preview": [
+    {
+      "first_name": "Lisa",
+      "last_name": "Gonzalez",
+      "segment": "Basic",
+      "phone": "+1-629-520-5804"
+    },
+    {
+      "first_name": "William",
+      "last_name": "Moore",
+      "segment": "Standard",
+      "phone": "+1-671-628-7625"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Taylor",
+      "segment": "VIP",
+      "phone": "+1-128-145-3447"
+    },
+    {
+      "first_name": "Jennifer",
+      "last_name": "Moore",
+      "segment": "VIP",
+      "phone": "+1-533-851-2627"
+    },
+    {
+      "first_name": "Michael",
+      "last_name": "Gonzalez",
+      "segment": "Premium",
+      "phone": "+1-728-022-4284"
+    },
+    {
+      "first_name": "Jessica",
+      "last_name": "Miller",
+      "segment": "Basic",
+      "phone": "+1-785-111-7843"
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Jackson",
+      "segment": "Basic",
+      "phone": "+1-226-778-0182"
+    },
+    {
+      "first_name": "Amanda",
+      "last_name": "Jackson",
+      "segment": "VIP",
+      "phone": "+1-200-579-0712"
+    },
+    {
+      "first_name": "Robert",
+      "last_name": "Martin",
+      "segment": "Basic",
+      "phone": "+1-636-947-7452"
+    },
+    {
+      "first_name": "Amanda",
+      "last_name": "Smith",
+      "segment": "VIP",
+      "phone": "+1-837-520-1351"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Gonzalez",
+      "segment": "Premium",
+      "phone": "+1-765-525-1995"
+    },
+    {
+      "first_name": "Jane",
+      "last_name": "Moore",
+      "segment": "Standard",
+      "phone": "+1-298-333-1737"
+    },
+    {
+      "first_name": "William",
+      "last_name": "Johnson",
+      "segment": "Standard",
+      "phone": "+1-673-400-6609"
+    },
+    {
+      "first_name": "Matthew",
+      "last_name": "Martinez",
+      "segment": "Premium",
+      "phone": "+1-301-602-9800"
+    },
+    {
+      "first_name": "Stephanie",
+      "last_name": "Johnson",
+      "segment": "Basic",
+      "phone": "+1-290-357-2400"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Williams",
+      "segment": "VIP",
+      "phone": "+1-690-423-3099"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Hernandez",
+      "segment": "Basic",
+      "phone": "+1-731-385-2965"
+    },
+    {
+      "first_name": "Amanda",
+      "last_name": "Martinez",
+      "segment": "VIP",
+      "phone": "+1-293-962-4545"
+    },
+    {
+      "first_name": "Emily",
+      "last_name": "Jones",
+      "segment": "Basic",
+      "phone": "+1-125-967-6979"
+    },
+    {
+      "first_name": "Ashley",
+      "last_name": "Brown",
+      "segment": "VIP",
+      "phone": "+1-890-219-3617"
+    },
+    {
+      "first_name": "Jessica",
+      "last_name": "Martin",
+      "segment": "Standard",
+      "phone": "+1-748-113-5211"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Lopez",
+      "segment": "VIP",
+      "phone": "+1-167-148-9567"
+    },
+    {
+      "first_name": "Emily",
+      "last_name": "Thomas",
+      "segment": "Premium",
+      "phone": "+1-926-413-7900"
+    },
+    {
+      "first_name": "Stephanie",
+      "last_name": "Gonzalez",
+      "segment": "VIP",
+      "phone": "+1-251-623-1539"
+    },
+    {
+      "first_name": "Lisa",
+      "last_name": "Lopez",
+      "segment": "Standard",
+      "phone": "+1-339-212-9184"
+    },
+    {
+      "first_name": "Robert",
+      "last_name": "Martinez",
+      "segment": "Premium",
+      "phone": "+1-336-935-2488"
+    },
+    {
+      "first_name": "David",
+      "last_name": "Rodriguez",
+      "segment": "Premium",
+      "phone": "+1-571-903-4383"
+    },
+    {
+      "first_name": "James",
+      "last_name": "Miller",
+      "segment": "VIP",
+      "phone": "+1-537-783-9148"
+    },
+    {
+      "first_name": "Jennifer",
+      "last_name": "Martinez",
+      "segment": "VIP",
+      "phone": "+1-182-938-0399"
+    },
+    {
+      "first_name": "Emily",
+      "last_name": "Davis",
+      "segment": "VIP",
+      "phone": "+1-495-770-7818"
+    },
+    {
+      "first_name": "Anthony",
+      "last_name": "Taylor",
+      "segment": "Premium",
+      "phone": "+1-976-615-1591"
+    },
+    {
+      "first_name": "Lisa",
+      "last_name": "Rodriguez",
+      "segment": "VIP",
+      "phone": "+1-123-997-3771"
+    },
+    {
+      "first_name": "Jessica",
+      "last_name": "Thomas",
+      "segment": "Standard",
+      "phone": "+1-926-475-5111"
+    },
+    {
+      "first_name": "Robert",
+      "last_name": "Smith",
+      "segment": "Standard",
+      "phone": "+1-762-850-5976"
+    },
+    {
+      "first_name": "Michael",
+      "last_name": "Williams",
+      "segment": "Premium",
+      "phone": "+1-491-772-3604"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Wilson",
+      "segment": "Premium",
+      "phone": "+1-537-139-6495"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Brown",
+      "segment": "VIP",
+      "phone": "+1-049-506-3609"
+    },
+    {
+      "first_name": "Stephanie",
+      "last_name": "Rodriguez",
+      "segment": "Standard",
+      "phone": "+1-850-578-2382"
+    },
+    {
+      "first_name": "William",
+      "last_name": "Brown",
+      "segment": "Premium",
+      "phone": "+1-059-654-4025"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Jackson",
+      "segment": "Standard",
+      "phone": "+1-889-391-4955"
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Williams",
+      "segment": "Basic",
+      "phone": "+1-177-490-6282"
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Jackson",
+      "segment": "Basic",
+      "phone": "+1-576-863-1530"
+    },
+    {
+      "first_name": "William",
+      "last_name": "Rodriguez",
+      "segment": "VIP",
+      "phone": "+1-696-436-8330"
+    },
+    {
+      "first_name": "Jennifer",
+      "last_name": "Martin",
+      "segment": "Premium",
+      "phone": "+1-185-369-4247"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Jones",
+      "segment": "Basic",
+      "phone": "+1-226-843-4346"
+    },
+    {
+      "first_name": "Matthew",
+      "last_name": "Davis",
+      "segment": "Basic",
+      "phone": "+1-983-204-5693"
+    },
+    {
+      "first_name": "Christopher",
+      "last_name": "Lopez",
+      "segment": "VIP",
+      "phone": "+1-171-298-0350"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Brown",
+      "segment": "VIP",
+      "phone": "+1-621-734-5480"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Johnson",
+      "segment": "VIP",
+      "phone": "+1-608-595-1915"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Anderson",
+      "segment": "Basic",
+      "phone": "+1-979-647-4182"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Johnson",
+      "segment": "Basic",
+      "phone": "+1-023-658-1705"
+    },
+    {
+      "first_name": "Amanda",
+      "last_name": "Garcia",
+      "segment": "VIP",
+      "phone": "+1-993-262-9675"
+    },
+    {
+      "first_name": "Ashley",
+      "last_name": "Gonzalez",
+      "segment": "Standard",
+      "phone": "+1-460-165-1120"
+    },
+    {
+      "first_name": "Lisa",
+      "last_name": "Wilson",
+      "segment": "VIP",
+      "phone": "+1-399-326-2832"
+    },
+    {
+      "first_name": "David",
+      "last_name": "Thomas",
+      "segment": "Premium",
+      "phone": "+1-025-222-3919"
+    },
+    {
+      "first_name": "Jane",
+      "last_name": "Rodriguez",
+      "segment": "VIP",
+      "phone": "+1-170-321-7173"
+    },
+    {
+      "first_name": "Jennifer",
+      "last_name": "Jones",
+      "segment": "Basic",
+      "phone": "+1-757-883-5409"
+    },
+    {
+      "first_name": "Stephanie",
+      "last_name": "Miller",
+      "segment": "VIP",
+      "phone": "+1-988-047-1375"
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Wilson",
+      "segment": "VIP",
+      "phone": "+1-830-969-4860"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Taylor",
+      "segment": "VIP",
+      "phone": "+1-110-402-9344"
+    },
+    {
+      "first_name": "Anthony",
+      "last_name": "Johnson",
+      "segment": "VIP",
+      "phone": "+1-778-123-4959"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Martin",
+      "segment": "VIP",
+      "phone": "+1-502-482-4137"
+    },
+    {
+      "first_name": "Matthew",
+      "last_name": "Martin",
+      "segment": "Standard",
+      "phone": "+1-820-943-3439"
+    }
+  ],
+  "execution_time": 0.1584458351135254,
+  "sql_query": "SELECT\n  first_name,\n  last_name,\n  segment,\n  phone\nFROM\n  dim_customer\nWHERE\n  country_id = (\n    SELECT\n      country_id\n    FROM\n      dim_country\n    WHERE\n      country_name = 'Germany'\n  );",
+  "results": [
+    {
+      "first_name": "Lisa",
+      "last_name": "Gonzalez",
+      "segment": "Basic",
+      "phone": "+1-629-520-5804"
+    },
+    {
+      "first_name": "William",
+      "last_name": "Moore",
+      "segment": "Standard",
+      "phone": "+1-671-628-7625"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Taylor",
+      "segment": "VIP",
+      "phone": "+1-128-145-3447"
+    },
+    {
+      "first_name": "Jennifer",
+      "last_name": "Moore",
+      "segment": "VIP",
+      "phone": "+1-533-851-2627"
+    },
+    {
+      "first_name": "Michael",
+      "last_name": "Gonzalez",
+      "segment": "Premium",
+      "phone": "+1-728-022-4284"
+    },
+    {
+      "first_name": "Jessica",
+      "last_name": "Miller",
+      "segment": "Basic",
+      "phone": "+1-785-111-7843"
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Jackson",
+      "segment": "Basic",
+      "phone": "+1-226-778-0182"
+    },
+    {
+      "first_name": "Amanda",
+      "last_name": "Jackson",
+      "segment": "VIP",
+      "phone": "+1-200-579-0712"
+    },
+    {
+      "first_name": "Robert",
+      "last_name": "Martin",
+      "segment": "Basic",
+      "phone": "+1-636-947-7452"
+    },
+    {
+      "first_name": "Amanda",
+      "last_name": "Smith",
+      "segment": "VIP",
+      "phone": "+1-837-520-1351"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Gonzalez",
+      "segment": "Premium",
+      "phone": "+1-765-525-1995"
+    },
+    {
+      "first_name": "Jane",
+      "last_name": "Moore",
+      "segment": "Standard",
+      "phone": "+1-298-333-1737"
+    },
+    {
+      "first_name": "William",
+      "last_name": "Johnson",
+      "segment": "Standard",
+      "phone": "+1-673-400-6609"
+    },
+    {
+      "first_name": "Matthew",
+      "last_name": "Martinez",
+      "segment": "Premium",
+      "phone": "+1-301-602-9800"
+    },
+    {
+      "first_name": "Stephanie",
+      "last_name": "Johnson",
+      "segment": "Basic",
+      "phone": "+1-290-357-2400"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Williams",
+      "segment": "VIP",
+      "phone": "+1-690-423-3099"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Hernandez",
+      "segment": "Basic",
+      "phone": "+1-731-385-2965"
+    },
+    {
+      "first_name": "Amanda",
+      "last_name": "Martinez",
+      "segment": "VIP",
+      "phone": "+1-293-962-4545"
+    },
+    {
+      "first_name": "Emily",
+      "last_name": "Jones",
+      "segment": "Basic",
+      "phone": "+1-125-967-6979"
+    },
+    {
+      "first_name": "Ashley",
+      "last_name": "Brown",
+      "segment": "VIP",
+      "phone": "+1-890-219-3617"
+    },
+    {
+      "first_name": "Jessica",
+      "last_name": "Martin",
+      "segment": "Standard",
+      "phone": "+1-748-113-5211"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Lopez",
+      "segment": "VIP",
+      "phone": "+1-167-148-9567"
+    },
+    {
+      "first_name": "Emily",
+      "last_name": "Thomas",
+      "segment": "Premium",
+      "phone": "+1-926-413-7900"
+    },
+    {
+      "first_name": "Stephanie",
+      "last_name": "Gonzalez",
+      "segment": "VIP",
+      "phone": "+1-251-623-1539"
+    },
+    {
+      "first_name": "Lisa",
+      "last_name": "Lopez",
+      "segment": "Standard",
+      "phone": "+1-339-212-9184"
+    },
+    {
+      "first_name": "Robert",
+      "last_name": "Martinez",
+      "segment": "Premium",
+      "phone": "+1-336-935-2488"
+    },
+    {
+      "first_name": "David",
+      "last_name": "Rodriguez",
+      "segment": "Premium",
+      "phone": "+1-571-903-4383"
+    },
+    {
+      "first_name": "James",
+      "last_name": "Miller",
+      "segment": "VIP",
+      "phone": "+1-537-783-9148"
+    },
+    {
+      "first_name": "Jennifer",
+      "last_name": "Martinez",
+      "segment": "VIP",
+      "phone": "+1-182-938-0399"
+    },
+    {
+      "first_name": "Emily",
+      "last_name": "Davis",
+      "segment": "VIP",
+      "phone": "+1-495-770-7818"
+    },
+    {
+      "first_name": "Anthony",
+      "last_name": "Taylor",
+      "segment": "Premium",
+      "phone": "+1-976-615-1591"
+    },
+    {
+      "first_name": "Lisa",
+      "last_name": "Rodriguez",
+      "segment": "VIP",
+      "phone": "+1-123-997-3771"
+    },
+    {
+      "first_name": "Jessica",
+      "last_name": "Thomas",
+      "segment": "Standard",
+      "phone": "+1-926-475-5111"
+    },
+    {
+      "first_name": "Robert",
+      "last_name": "Smith",
+      "segment": "Standard",
+      "phone": "+1-762-850-5976"
+    },
+    {
+      "first_name": "Michael",
+      "last_name": "Williams",
+      "segment": "Premium",
+      "phone": "+1-491-772-3604"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Wilson",
+      "segment": "Premium",
+      "phone": "+1-537-139-6495"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Brown",
+      "segment": "VIP",
+      "phone": "+1-049-506-3609"
+    },
+    {
+      "first_name": "Stephanie",
+      "last_name": "Rodriguez",
+      "segment": "Standard",
+      "phone": "+1-850-578-2382"
+    },
+    {
+      "first_name": "William",
+      "last_name": "Brown",
+      "segment": "Premium",
+      "phone": "+1-059-654-4025"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Jackson",
+      "segment": "Standard",
+      "phone": "+1-889-391-4955"
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Williams",
+      "segment": "Basic",
+      "phone": "+1-177-490-6282"
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Jackson",
+      "segment": "Basic",
+      "phone": "+1-576-863-1530"
+    },
+    {
+      "first_name": "William",
+      "last_name": "Rodriguez",
+      "segment": "VIP",
+      "phone": "+1-696-436-8330"
+    },
+    {
+      "first_name": "Jennifer",
+      "last_name": "Martin",
+      "segment": "Premium",
+      "phone": "+1-185-369-4247"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Jones",
+      "segment": "Basic",
+      "phone": "+1-226-843-4346"
+    },
+    {
+      "first_name": "Matthew",
+      "last_name": "Davis",
+      "segment": "Basic",
+      "phone": "+1-983-204-5693"
+    },
+    {
+      "first_name": "Christopher",
+      "last_name": "Lopez",
+      "segment": "VIP",
+      "phone": "+1-171-298-0350"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Brown",
+      "segment": "VIP",
+      "phone": "+1-621-734-5480"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Johnson",
+      "segment": "VIP",
+      "phone": "+1-608-595-1915"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Anderson",
+      "segment": "Basic",
+      "phone": "+1-979-647-4182"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Johnson",
+      "segment": "Basic",
+      "phone": "+1-023-658-1705"
+    },
+    {
+      "first_name": "Amanda",
+      "last_name": "Garcia",
+      "segment": "VIP",
+      "phone": "+1-993-262-9675"
+    },
+    {
+      "first_name": "Ashley",
+      "last_name": "Gonzalez",
+      "segment": "Standard",
+      "phone": "+1-460-165-1120"
+    },
+    {
+      "first_name": "Lisa",
+      "last_name": "Wilson",
+      "segment": "VIP",
+      "phone": "+1-399-326-2832"
+    },
+    {
+      "first_name": "David",
+      "last_name": "Thomas",
+      "segment": "Premium",
+      "phone": "+1-025-222-3919"
+    },
+    {
+      "first_name": "Jane",
+      "last_name": "Rodriguez",
+      "segment": "VIP",
+      "phone": "+1-170-321-7173"
+    },
+    {
+      "first_name": "Jennifer",
+      "last_name": "Jones",
+      "segment": "Basic",
+      "phone": "+1-757-883-5409"
+    },
+    {
+      "first_name": "Stephanie",
+      "last_name": "Miller",
+      "segment": "VIP",
+      "phone": "+1-988-047-1375"
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Wilson",
+      "segment": "VIP",
+      "phone": "+1-830-969-4860"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Taylor",
+      "segment": "VIP",
+      "phone": "+1-110-402-9344"
+    },
+    {
+      "first_name": "Anthony",
+      "last_name": "Johnson",
+      "segment": "VIP",
+      "phone": "+1-778-123-4959"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Martin",
+      "segment": "VIP",
+      "phone": "+1-502-482-4137"
+    },
+    {
+      "first_name": "Matthew",
+      "last_name": "Martin",
+      "segment": "Standard",
+      "phone": "+1-820-943-3439"
+    }
+  ]
+}
+
+
+================================================================================
+📋 STEP: GENERATE_FINAL_RESPONSE
+================================================================================
+⏱️  Duration: 1.7583303451538086s
+✅ Success: True
+🎨 Final Response: {
+  "resolvable": true,
+  "result_type": "table",
+  "query": "SELECT\n  first_name,\n  last_name,\n  segment,\n  phone\nFROM\n  dim_customer\nWHERE\n  country_id = (\n    SELECT\n      country_id\n    FROM\n      dim_country\n    WHERE\n      country_name = 'Germany'\n  );",
+  "chart_data": null,
+  "result": [
+    {
+      "first_name": "Lisa",
+      "last_name": "Gonzalez",
+      "segment": "Basic",
+      "phone": "+1-629-520-5804"
+    },
+    {
+      "first_name": "William",
+      "last_name": "Moore",
+      "segment": "Standard",
+      "phone": "+1-671-628-7625"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Taylor",
+      "segment": "VIP",
+      "phone": "+1-128-145-3447"
+    },
+    {
+      "first_name": "Jennifer",
+      "last_name": "Moore",
+      "segment": "VIP",
+      "phone": "+1-533-851-2627"
+    },
+    {
+      "first_name": "Michael",
+      "last_name": "Gonzalez",
+      "segment": "Premium",
+      "phone": "+1-728-022-4284"
+    },
+    {
+      "first_name": "Jessica",
+      "last_name": "Miller",
+      "segment": "Basic",
+      "phone": "+1-785-111-7843"
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Jackson",
+      "segment": "Basic",
+      "phone": "+1-226-778-0182"
+    },
+    {
+      "first_name": "Amanda",
+      "last_name": "Jackson",
+      "segment": "VIP",
+      "phone": "+1-200-579-0712"
+    },
+    {
+      "first_name": "Robert",
+      "last_name": "Martin",
+      "segment": "Basic",
+      "phone": "+1-636-947-7452"
+    },
+    {
+      "first_name": "Amanda",
+      "last_name": "Smith",
+      "segment": "VIP",
+      "phone": "+1-837-520-1351"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Gonzalez",
+      "segment": "Premium",
+      "phone": "+1-765-525-1995"
+    },
+    {
+      "first_name": "Jane",
+      "last_name": "Moore",
+      "segment": "Standard",
+      "phone": "+1-298-333-1737"
+    },
+    {
+      "first_name": "William",
+      "last_name": "Johnson",
+      "segment": "Standard",
+      "phone": "+1-673-400-6609"
+    },
+    {
+      "first_name": "Matthew",
+      "last_name": "Martinez",
+      "segment": "Premium",
+      "phone": "+1-301-602-9800"
+    },
+    {
+      "first_name": "Stephanie",
+      "last_name": "Johnson",
+      "segment": "Basic",
+      "phone": "+1-290-357-2400"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Williams",
+      "segment": "VIP",
+      "phone": "+1-690-423-3099"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Hernandez",
+      "segment": "Basic",
+      "phone": "+1-731-385-2965"
+    },
+    {
+      "first_name": "Amanda",
+      "last_name": "Martinez",
+      "segment": "VIP",
+      "phone": "+1-293-962-4545"
+    },
+    {
+      "first_name": "Emily",
+      "last_name": "Jones",
+      "segment": "Basic",
+      "phone": "+1-125-967-6979"
+    },
+    {
+      "first_name": "Ashley",
+      "last_name": "Brown",
+      "segment": "VIP",
+      "phone": "+1-890-219-3617"
+    },
+    {
+      "first_name": "Jessica",
+      "last_name": "Martin",
+      "segment": "Standard",
+      "phone": "+1-748-113-5211"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Lopez",
+      "segment": "VIP",
+      "phone": "+1-167-148-9567"
+    },
+    {
+      "first_name": "Emily",
+      "last_name": "Thomas",
+      "segment": "Premium",
+      "phone": "+1-926-413-7900"
+    },
+    {
+      "first_name": "Stephanie",
+      "last_name": "Gonzalez",
+      "segment": "VIP",
+      "phone": "+1-251-623-1539"
+    },
+    {
+      "first_name": "Lisa",
+      "last_name": "Lopez",
+      "segment": "Standard",
+      "phone": "+1-339-212-9184"
+    },
+    {
+      "first_name": "Robert",
+      "last_name": "Martinez",
+      "segment": "Premium",
+      "phone": "+1-336-935-2488"
+    },
+    {
+      "first_name": "David",
+      "last_name": "Rodriguez",
+      "segment": "Premium",
+      "phone": "+1-571-903-4383"
+    },
+    {
+      "first_name": "James",
+      "last_name": "Miller",
+      "segment": "VIP",
+      "phone": "+1-537-783-9148"
+    },
+    {
+      "first_name": "Jennifer",
+      "last_name": "Martinez",
+      "segment": "VIP",
+      "phone": "+1-182-938-0399"
+    },
+    {
+      "first_name": "Emily",
+      "last_name": "Davis",
+      "segment": "VIP",
+      "phone": "+1-495-770-7818"
+    },
+    {
+      "first_name": "Anthony",
+      "last_name": "Taylor",
+      "segment": "Premium",
+      "phone": "+1-976-615-1591"
+    },
+    {
+      "first_name": "Lisa",
+      "last_name": "Rodriguez",
+      "segment": "VIP",
+      "phone": "+1-123-997-3771"
+    },
+    {
+      "first_name": "Jessica",
+      "last_name": "Thomas",
+      "segment": "Standard",
+      "phone": "+1-926-475-5111"
+    },
+    {
+      "first_name": "Robert",
+      "last_name": "Smith",
+      "segment": "Standard",
+      "phone": "+1-762-850-5976"
+    },
+    {
+      "first_name": "Michael",
+      "last_name": "Williams",
+      "segment": "Premium",
+      "phone": "+1-491-772-3604"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Wilson",
+      "segment": "Premium",
+      "phone": "+1-537-139-6495"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Brown",
+      "segment": "VIP",
+      "phone": "+1-049-506-3609"
+    },
+    {
+      "first_name": "Stephanie",
+      "last_name": "Rodriguez",
+      "segment": "Standard",
+      "phone": "+1-850-578-2382"
+    },
+    {
+      "first_name": "William",
+      "last_name": "Brown",
+      "segment": "Premium",
+      "phone": "+1-059-654-4025"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Jackson",
+      "segment": "Standard",
+      "phone": "+1-889-391-4955"
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Williams",
+      "segment": "Basic",
+      "phone": "+1-177-490-6282"
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Jackson",
+      "segment": "Basic",
+      "phone": "+1-576-863-1530"
+    },
+    {
+      "first_name": "William",
+      "last_name": "Rodriguez",
+      "segment": "VIP",
+      "phone": "+1-696-436-8330"
+    },
+    {
+      "first_name": "Jennifer",
+      "last_name": "Martin",
+      "segment": "Premium",
+      "phone": "+1-185-369-4247"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Jones",
+      "segment": "Basic",
+      "phone": "+1-226-843-4346"
+    },
+    {
+      "first_name": "Matthew",
+      "last_name": "Davis",
+      "segment": "Basic",
+      "phone": "+1-983-204-5693"
+    },
+    {
+      "first_name": "Christopher",
+      "last_name": "Lopez",
+      "segment": "VIP",
+      "phone": "+1-171-298-0350"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Brown",
+      "segment": "VIP",
+      "phone": "+1-621-734-5480"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Johnson",
+      "segment": "VIP",
+      "phone": "+1-608-595-1915"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Anderson",
+      "segment": "Basic",
+      "phone": "+1-979-647-4182"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Johnson",
+      "segment": "Basic",
+      "phone": "+1-023-658-1705"
+    },
+    {
+      "first_name": "Amanda",
+      "last_name": "Garcia",
+      "segment": "VIP",
+      "phone": "+1-993-262-9675"
+    },
+    {
+      "first_name": "Ashley",
+      "last_name": "Gonzalez",
+      "segment": "Standard",
+      "phone": "+1-460-165-1120"
+    },
+    {
+      "first_name": "Lisa",
+      "last_name": "Wilson",
+      "segment": "VIP",
+      "phone": "+1-399-326-2832"
+    },
+    {
+      "first_name": "David",
+      "last_name": "Thomas",
+      "segment": "Premium",
+      "phone": "+1-025-222-3919"
+    },
+    {
+      "first_name": "Jane",
+      "last_name": "Rodriguez",
+      "segment": "VIP",
+      "phone": "+1-170-321-7173"
+    },
+    {
+      "first_name": "Jennifer",
+      "last_name": "Jones",
+      "segment": "Basic",
+      "phone": "+1-757-883-5409"
+    },
+    {
+      "first_name": "Stephanie",
+      "last_name": "Miller",
+      "segment": "VIP",
+      "phone": "+1-988-047-1375"
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Wilson",
+      "segment": "VIP",
+      "phone": "+1-830-969-4860"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Taylor",
+      "segment": "VIP",
+      "phone": "+1-110-402-9344"
+    },
+    {
+      "first_name": "Anthony",
+      "last_name": "Johnson",
+      "segment": "VIP",
+      "phone": "+1-778-123-4959"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Martin",
+      "segment": "VIP",
+      "phone": "+1-502-482-4137"
+    },
+    {
+      "first_name": "Matthew",
+      "last_name": "Martin",
+      "segment": "Standard",
+      "phone": "+1-820-943-3439"
+    }
+  ],
+  "message": "Query executed successfully! Found 63 rows of data."
+}
+
+✅ Workflow completed successfully!
+📊 Final Result: {
+  "resolvable": true,
+  "result_type": "table",
+  "query": "SELECT\n  first_name,\n  last_name,\n  segment,\n  phone\nFROM\n  dim_customer\nWHERE\n  country_id = (\n    SELECT\n      country_id\n    FROM\n      dim_country\n    WHERE\n      country_name = 'Germany'\n  );",
+  "chart_data": null,
+  "result": [
+    {
+      "first_name": "Lisa",
+      "last_name": "Gonzalez",
+      "segment": "Basic",
+      "phone": "+1-629-520-5804"
+    },
+    {
+      "first_name": "William",
+      "last_name": "Moore",
+      "segment": "Standard",
+      "phone": "+1-671-628-7625"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Taylor",
+      "segment": "VIP",
+      "phone": "+1-128-145-3447"
+    },
+    {
+      "first_name": "Jennifer",
+      "last_name": "Moore",
+      "segment": "VIP",
+      "phone": "+1-533-851-2627"
+    },
+    {
+      "first_name": "Michael",
+      "last_name": "Gonzalez",
+      "segment": "Premium",
+      "phone": "+1-728-022-4284"
+    },
+    {
+      "first_name": "Jessica",
+      "last_name": "Miller",
+      "segment": "Basic",
+      "phone": "+1-785-111-7843"
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Jackson",
+      "segment": "Basic",
+      "phone": "+1-226-778-0182"
+    },
+    {
+      "first_name": "Amanda",
+      "last_name": "Jackson",
+      "segment": "VIP",
+      "phone": "+1-200-579-0712"
+    },
+    {
+      "first_name": "Robert",
+      "last_name": "Martin",
+      "segment": "Basic",
+      "phone": "+1-636-947-7452"
+    },
+    {
+      "first_name": "Amanda",
+      "last_name": "Smith",
+      "segment": "VIP",
+      "phone": "+1-837-520-1351"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Gonzalez",
+      "segment": "Premium",
+      "phone": "+1-765-525-1995"
+    },
+    {
+      "first_name": "Jane",
+      "last_name": "Moore",
+      "segment": "Standard",
+      "phone": "+1-298-333-1737"
+    },
+    {
+      "first_name": "William",
+      "last_name": "Johnson",
+      "segment": "Standard",
+      "phone": "+1-673-400-6609"
+    },
+    {
+      "first_name": "Matthew",
+      "last_name": "Martinez",
+      "segment": "Premium",
+      "phone": "+1-301-602-9800"
+    },
+    {
+      "first_name": "Stephanie",
+      "last_name": "Johnson",
+      "segment": "Basic",
+      "phone": "+1-290-357-2400"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Williams",
+      "segment": "VIP",
+      "phone": "+1-690-423-3099"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Hernandez",
+      "segment": "Basic",
+      "phone": "+1-731-385-2965"
+    },
+    {
+      "first_name": "Amanda",
+      "last_name": "Martinez",
+      "segment": "VIP",
+      "phone": "+1-293-962-4545"
+    },
+    {
+      "first_name": "Emily",
+      "last_name": "Jones",
+      "segment": "Basic",
+      "phone": "+1-125-967-6979"
+    },
+    {
+      "first_name": "Ashley",
+      "last_name": "Brown",
+      "segment": "VIP",
+      "phone": "+1-890-219-3617"
+    },
+    {
+      "first_name": "Jessica",
+      "last_name": "Martin",
+      "segment": "Standard",
+      "phone": "+1-748-113-5211"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Lopez",
+      "segment": "VIP",
+      "phone": "+1-167-148-9567"
+    },
+    {
+      "first_name": "Emily",
+      "last_name": "Thomas",
+      "segment": "Premium",
+      "phone": "+1-926-413-7900"
+    },
+    {
+      "first_name": "Stephanie",
+      "last_name": "Gonzalez",
+      "segment": "VIP",
+      "phone": "+1-251-623-1539"
+    },
+    {
+      "first_name": "Lisa",
+      "last_name": "Lopez",
+      "segment": "Standard",
+      "phone": "+1-339-212-9184"
+    },
+    {
+      "first_name": "Robert",
+      "last_name": "Martinez",
+      "segment": "Premium",
+      "phone": "+1-336-935-2488"
+    },
+    {
+      "first_name": "David",
+      "last_name": "Rodriguez",
+      "segment": "Premium",
+      "phone": "+1-571-903-4383"
+    },
+    {
+      "first_name": "James",
+      "last_name": "Miller",
+      "segment": "VIP",
+      "phone": "+1-537-783-9148"
+    },
+    {
+      "first_name": "Jennifer",
+      "last_name": "Martinez",
+      "segment": "VIP",
+      "phone": "+1-182-938-0399"
+    },
+    {
+      "first_name": "Emily",
+      "last_name": "Davis",
+      "segment": "VIP",
+      "phone": "+1-495-770-7818"
+    },
+    {
+      "first_name": "Anthony",
+      "last_name": "Taylor",
+      "segment": "Premium",
+      "phone": "+1-976-615-1591"
+    },
+    {
+      "first_name": "Lisa",
+      "last_name": "Rodriguez",
+      "segment": "VIP",
+      "phone": "+1-123-997-3771"
+    },
+    {
+      "first_name": "Jessica",
+      "last_name": "Thomas",
+      "segment": "Standard",
+      "phone": "+1-926-475-5111"
+    },
+    {
+      "first_name": "Robert",
+      "last_name": "Smith",
+      "segment": "Standard",
+      "phone": "+1-762-850-5976"
+    },
+    {
+      "first_name": "Michael",
+      "last_name": "Williams",
+      "segment": "Premium",
+      "phone": "+1-491-772-3604"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Wilson",
+      "segment": "Premium",
+      "phone": "+1-537-139-6495"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Brown",
+      "segment": "VIP",
+      "phone": "+1-049-506-3609"
+    },
+    {
+      "first_name": "Stephanie",
+      "last_name": "Rodriguez",
+      "segment": "Standard",
+      "phone": "+1-850-578-2382"
+    },
+    {
+      "first_name": "William",
+      "last_name": "Brown",
+      "segment": "Premium",
+      "phone": "+1-059-654-4025"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Jackson",
+      "segment": "Standard",
+      "phone": "+1-889-391-4955"
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Williams",
+      "segment": "Basic",
+      "phone": "+1-177-490-6282"
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Jackson",
+      "segment": "Basic",
+      "phone": "+1-576-863-1530"
+    },
+    {
+      "first_name": "William",
+      "last_name": "Rodriguez",
+      "segment": "VIP",
+      "phone": "+1-696-436-8330"
+    },
+    {
+      "first_name": "Jennifer",
+      "last_name": "Martin",
+      "segment": "Premium",
+      "phone": "+1-185-369-4247"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Jones",
+      "segment": "Basic",
+      "phone": "+1-226-843-4346"
+    },
+    {
+      "first_name": "Matthew",
+      "last_name": "Davis",
+      "segment": "Basic",
+      "phone": "+1-983-204-5693"
+    },
+    {
+      "first_name": "Christopher",
+      "last_name": "Lopez",
+      "segment": "VIP",
+      "phone": "+1-171-298-0350"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Brown",
+      "segment": "VIP",
+      "phone": "+1-621-734-5480"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Johnson",
+      "segment": "VIP",
+      "phone": "+1-608-595-1915"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Anderson",
+      "segment": "Basic",
+      "phone": "+1-979-647-4182"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Johnson",
+      "segment": "Basic",
+      "phone": "+1-023-658-1705"
+    },
+    {
+      "first_name": "Amanda",
+      "last_name": "Garcia",
+      "segment": "VIP",
+      "phone": "+1-993-262-9675"
+    },
+    {
+      "first_name": "Ashley",
+      "last_name": "Gonzalez",
+      "segment": "Standard",
+      "phone": "+1-460-165-1120"
+    },
+    {
+      "first_name": "Lisa",
+      "last_name": "Wilson",
+      "segment": "VIP",
+      "phone": "+1-399-326-2832"
+    },
+    {
+      "first_name": "David",
+      "last_name": "Thomas",
+      "segment": "Premium",
+      "phone": "+1-025-222-3919"
+    },
+    {
+      "first_name": "Jane",
+      "last_name": "Rodriguez",
+      "segment": "VIP",
+      "phone": "+1-170-321-7173"
+    },
+    {
+      "first_name": "Jennifer",
+      "last_name": "Jones",
+      "segment": "Basic",
+      "phone": "+1-757-883-5409"
+    },
+    {
+      "first_name": "Stephanie",
+      "last_name": "Miller",
+      "segment": "VIP",
+      "phone": "+1-988-047-1375"
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Wilson",
+      "segment": "VIP",
+      "phone": "+1-830-969-4860"
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Taylor",
+      "segment": "VIP",
+      "phone": "+1-110-402-9344"
+    },
+    {
+      "first_name": "Anthony",
+      "last_name": "Johnson",
+      "segment": "VIP",
+      "phone": "+1-778-123-4959"
+    },
+    {
+      "first_name": "Elizabeth",
+      "last_name": "Martin",
+      "segment": "VIP",
+      "phone": "+1-502-482-4137"
+    },
+    {
+      "first_name": "Matthew",
+      "last_name": "Martin",
+      "segment": "Standard",
+      "phone": "+1-820-943-3439"
+    }
+  ],
+  "message": "Query executed successfully! Found 63 rows of data."
+}
+⏱️  Total Workflow Time: 17.921s
+
+================================================================================
+🔍 WORKFLOW END
+================================================================================
+🏁 Workflow completed in 17.921s

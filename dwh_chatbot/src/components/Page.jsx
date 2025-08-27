@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Plus, MessageSquare, Database, BarChart3, Menu, X, Settings, ChevronDown, ChevronUp, Clock, Code, RefreshCw } from "lucide-react";
 import Chart from "./Chart";
+import DataTable from "./Datatable";
 
 // Advanced word-by-word typing animation with blinking cursor
 const TypingText = ({ text, speed = 100, onComplete, onProgress }) => {
@@ -59,7 +60,7 @@ const TypingText = ({ text, speed = 100, onComplete, onProgress }) => {
 const QueryDetails = ({ message }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  if (!message.resolvable || !message.sql_query) {
+  if (!message.resolvable || !message.query) {
     return null;
   }
 
@@ -72,10 +73,10 @@ const QueryDetails = ({ message }) => {
         <div className="flex items-center space-x-2">
           <Code className="w-4 h-4" />
           <span>Query Details</span>
-          {message.retry_attempted && (
-            <div className="flex items-center space-x-1 bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs">
-              <RefreshCw className="w-3 h-3" />
-              <span>Auto-corrected</span>
+          {message.workflow_steps && message.workflow_steps.length > 0 && (
+            <div className="flex items-center space-x-1 bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">
+              <Database className="w-3 h-3" />
+              <span>7-Step Workflow</span>
             </div>
           )}
         </div>
@@ -84,96 +85,95 @@ const QueryDetails = ({ message }) => {
 
       {isExpanded && (
         <div className="px-4 pb-4 space-y-3 border-t border-gray-200">
-          {/* Retry Information */}
-          {message.retry_attempted && (
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3">
-              <h4 className="text-xs font-semibold text-yellow-800 uppercase tracking-wide mb-2 flex items-center">
-                <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
-                Query Auto-Corrected
+          {/* Workflow Steps */}
+          {message.workflow_steps && message.workflow_steps.length > 0 && (
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+              <h4 className="text-xs font-semibold text-blue-800 uppercase tracking-wide mb-2 flex items-center">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                7-Step Workflow Execution
               </h4>
-              <p className="text-sm text-yellow-700 mb-2">
-                The original query failed and was automatically corrected by AI.
-              </p>
-
-              {message.original_sql && (
-                <div className="mb-2">
-                  <h5 className="text-xs font-medium text-yellow-700 mb-1">Original SQL (Failed):</h5>
-                  <pre className="bg-red-100 text-red-800 p-2 rounded text-xs overflow-x-auto border border-red-200">
-                    <code>{message.original_sql}</code>
-                  </pre>
+              <div className="space-y-2">
+                {message.workflow_steps.map((step, index) => (
+                  <div key={index} className="flex items-center space-x-2 text-sm">
+                    <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
+                      step.status === 'success' ? 'bg-green-100 text-green-800' : 
+                      step.status === 'failed' ? 'bg-red-100 text-red-800' : 
+                      'bg-gray-100 text-gray-800'
+                    }`}>
+                      {index + 1}
                 </div>
-              )}
-
-              {message.corrected_sql && (
-                <div>
-                  <h5 className="text-xs font-medium text-yellow-700 mb-1">Corrected SQL (Success):</h5>
-                  <pre className="bg-green-100 text-green-800 p-2 rounded text-xs overflow-x-auto border border-green-200">
-                    <code>{message.corrected_sql}</code>
-                  </pre>
+                    <span className="text-gray-700">{step.name}</span>
+                    <span className={`text-xs px-2 py-1 rounded ${
+                      step.status === 'success' ? 'bg-green-100 text-green-800' : 
+                      step.status === 'failed' ? 'bg-red-100 text-red-800' : 
+                      'bg-gray-100 text-gray-800'
+                    }`}>
+                      {step.status}
+                    </span>
+                    {step.execution_time && (
+                      <span className="text-xs text-gray-500">({step.execution_time}s)</span>
+                    )}
+                  </div>
+                ))}
                 </div>
-              )}
             </div>
           )}
 
           {/* SQL Query */}
           <div>
             <h4 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-2">
-              {message.retry_attempted ? 'Final SQL Query' : 'Generated SQL'}
+              Generated SQL Query
             </h4>
             <pre className="bg-gray-800 text-green-400 p-3 rounded text-sm overflow-x-auto">
-              <code>{message.sql_query}</code>
+              <code>{message.query}</code>
             </pre>
           </div>
 
-          {/* Metadata */}
+          {/* Result Type */}
           <div className="grid grid-cols-2 gap-4 text-sm">
             <div>
               <h4 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-1">Result Type</h4>
-              <p className="text-gray-800">{message.query_metadata?.result_type || 'N/A'}</p>
+              <p className="text-gray-800">{message.result_type || 'N/A'}</p>
             </div>
             <div>
-              <h4 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-1">Chart Type</h4>
-              <p className="text-gray-800">{message.query_metadata?.chart_type || 'N/A'}</p>
+              <h4 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-1">Resolvable</h4>
+              <p className={`font-medium ${message.resolvable ? 'text-green-600' : 'text-red-600'}`}>
+                {message.resolvable ? 'Yes' : 'No'}
+              </p>
             </div>
             <div>
-              <h4 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-1">Rows Returned</h4>
-              <p className="text-gray-800">{message.query_metadata?.row_count || 0}</p>
+              <h4 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-1">Execution Time</h4>
+              <p className="text-gray-800">{message.execution_time || 0}s</p>
             </div>
             <div>
-              <h4 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-1">Columns</h4>
-              <p className="text-gray-800">{message.query_metadata?.columns?.length || 0}</p>
+              <h4 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-1">Data Format</h4>
+              <p className="text-gray-800">
+                {message.result_type === 'chart' ? 'Chart.js JSON' : 
+                 message.result_type === 'table' ? 'Table Data' : 
+                 message.result_type === 'summary' ? 'Summary Stats' : 
+                 'Text Response'}
+              </p>
             </div>
           </div>
 
-          {/* Execution Times */}
-          {(message.execution_time || message.sql_execution_time) && (
+          {/* Chart Data Preview (if available) */}
+          {message.chart_data && (
             <div>
-              <h4 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-2">Performance</h4>
-              <div className="flex items-center space-x-4 text-sm text-gray-600">
-                <div className="flex items-center space-x-1">
-                  <Clock className="w-3 h-3" />
-                  <span>Total: {message.execution_time}s</span>
-                </div>
-                {message.sql_execution_time && (
-                  <div className="flex items-center space-x-1">
-                    <Database className="w-3 h-3" />
-                    <span>SQL: {message.sql_execution_time}s</span>
-                  </div>
-                )}
+              <h4 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-2">Chart Configuration</h4>
+              <div className="bg-gray-100 p-3 rounded text-xs text-gray-700">
+                <p><strong>Type:</strong> {message.chart_data.type || 'Unknown'}</p>
+                <p><strong>Datasets:</strong> {message.chart_data.data?.datasets?.length || 0}</p>
+                <p><strong>Labels:</strong> {message.chart_data.data?.labels?.length || 0}</p>
               </div>
             </div>
           )}
 
-          {/* Column Names */}
-          {message.query_metadata?.columns?.length > 0 && (
+          {/* Result Data Preview (if available) */}
+          {message.result && message.result_type !== 'chart' && (
             <div>
-              <h4 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-2">Column Names</h4>
-              <div className="flex flex-wrap gap-1">
-                {message.query_metadata.columns.map((col, index) => (
-                  <span key={index} className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">
-                    {col}
-                  </span>
-                ))}
+              <h4 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-2">Result Data</h4>
+              <div className="bg-gray-100 p-3 rounded text-xs text-gray-700 max-h-32 overflow-y-auto">
+                <pre>{JSON.stringify(message.result, null, 2)}</pre>
               </div>
             </div>
           )}
@@ -186,26 +186,40 @@ const QueryDetails = ({ message }) => {
 const AssistantMessage = ({ message }) => {
   const [messageDone, setMessageDone] = useState(false);
   const [showChart, setShowChart] = useState(false);
+  const [showTable, setShowTable] = useState(false);
 
-  const canShowChart = messageDone && message.result_type === 'chart' && message.chart_json;
+  const canShowChart = messageDone && message.result_type === 'chart' && message.chart_data;
+  const canShowTable = messageDone && message.result_type === 'table' && message.result;
 
   return (
     <div className="max-w-3xl self-start rounded-2xl px-6 py-5 bg-white text-gray-800 border border-gray-200 shadow-2xl transition-all duration-300">
       {/* Message text with typing animation */}
       <p className="text-lg text-gray-800 font-medium leading-relaxed whitespace-pre-wrap">
         <TypingText
-          text={message.result_type === 'text' && (message.text_value ?? '') !== ''
-            ? `${message.content}\n\nResult: ${message.text_value}`
-            : message.content}
+          text={message.message || 'Here is the result of your query:'}
           speed={100}
-          onComplete={() => { setMessageDone(true); setShowChart(true); }}
+          onComplete={() => { 
+            setMessageDone(true); 
+            setShowChart(true); 
+            setShowTable(true);
+          }}
         />
       </p>
 
       {/* Chart appears below message after typing completes */}
       {canShowChart && (
         <div className="mt-6">
-          <Chart plotlyJson={message.chart_json} />
+          <Chart plotlyJson={message.chart_data} />
+        </div>
+      )}
+
+      {/* Table appears below message after typing completes */}
+      {canShowTable && (
+        <div className="mt-6">
+          <DataTable 
+            data={message.result}
+            title="Query Results"
+          />
         </div>
       )}
 
@@ -215,13 +229,13 @@ const AssistantMessage = ({ message }) => {
   );
 };
 
-
 const Page = () => {
   const [chatHistory, setChatHistory] = useState([]);
   const [currentChatId, setCurrentChatId] = useState("1");
   const [isLoading, setIsLoading] = useState(false);
   const [input, setInput] = useState("");
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [backendStatus, setBackendStatus] = useState('checking');
   const messagesEndRef = useRef(null);
 
   // Initialize with a default chat
@@ -233,6 +247,24 @@ const Page = () => {
     };
     setChatHistory([defaultChat]);
   }, []);
+
+  // Check backend status on component mount
+  useEffect(() => {
+    checkBackendStatus();
+  }, []);
+
+  const checkBackendStatus = async () => {
+    try {
+      const response = await fetch('http://localhost:5001/health');
+      if (response.ok) {
+        setBackendStatus('connected');
+      } else {
+        setBackendStatus('error');
+      }
+    } catch (error) {
+      setBackendStatus('error');
+    }
+  };
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -301,15 +333,16 @@ const Page = () => {
     setIsLoading(true);
 
     try {
-      // Make POST request to Flask backend (new structured response)
-      const response = await fetch('http://localhost:5000/query', {
+      // Make POST request to new query_generation_app.py backend
+      const response = await fetch('http://localhost:5001/query/advanced', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           query: messageContent,
-          per_term_k: 10,
-          whole_query_k: 10,
-          call_gemini: true,
+          options: {
+            max_retries: 3,
+            chart_preference: 'auto'
+          }
         }),
       });
 
@@ -322,61 +355,49 @@ const Page = () => {
 
       // Build assistant message based on new API contract
       let aiMessage;
-      if (!payload.resolvable) {
+      
+      if (payload.success && payload.resolvable) {
+        // Query was successful and resolvable
         aiMessage = {
           role: 'assistant',
-          content: payload.message || "I couldn't resolve that with the available data.",
+          message: payload.message || 'Here is the result of your query:',
+          timestamp: new Date().toISOString(),
+          resolvable: true,
+          result_type: payload.result_type || 'unknown',
+          query: payload.query || '',
+          chart_data: payload.chart_data || null,
+          result: payload.result || null,
+          workflow_steps: payload.workflow_steps || [],
+          execution_time: payload.execution_time || 0
+        };
+      } else if (payload.success && !payload.resolvable) {
+        // Query was processed but not resolvable
+        aiMessage = {
+          role: 'assistant',
+          message: payload.message || "I couldn't resolve that query with the available data.",
           timestamp: new Date().toISOString(),
           resolvable: false,
-          insights: payload.insights || [],
+          result_type: null,
+          query: payload.query || '',
+          chart_data: null,
+          result: null,
+          workflow_steps: payload.workflow_steps || [],
+          execution_time: payload.execution_time || 0
         };
       } else {
-        const res = payload.result || {};
-        if (res.type === 'text') {
+        // Query failed
           aiMessage = {
             role: 'assistant',
-            content: payload.message || 'Here is the result:',
+          message: payload.message || 'Sorry, I encountered an error while processing your request.',
             timestamp: new Date().toISOString(),
-            resolvable: true,
-            result_type: 'text',
-            text_value: res.value ?? '',
-            insights: payload.insights || [],
-            sql_query: payload.sql_query || '',
-            query_metadata: payload.query_metadata || {},
-            execution_time: payload.execution_time || 0,
-            sql_execution_time: payload.sql_execution_time || 0,
-            retry_attempted: payload.retry_attempted || false,
-            original_sql: payload.original_sql || '',
-            corrected_sql: payload.corrected_sql || '',
-          };
-        } else if (res.type === 'chart') {
-          aiMessage = {
-            role: 'assistant',
-            content: payload.message || 'Here is the visualization:',
-            timestamp: new Date().toISOString(),
-            resolvable: true,
-            result_type: 'chart',
-            has_chart: true,
-            chart_json: res.plotly_json, // Direct Plotly spec
-            insights: payload.insights || [],
-            sql_query: payload.sql_query || '',
-            query_metadata: payload.query_metadata || {},
-            execution_time: payload.execution_time || 0,
-            sql_execution_time: payload.sql_execution_time || 0,
-            retry_attempted: payload.retry_attempted || false,
-            original_sql: payload.original_sql || '',
-            corrected_sql: payload.corrected_sql || '',
-          };
-        } else {
-          // Unknown type - just show message
-          aiMessage = {
-            role: 'assistant',
-            content: payload.message || 'I have processed your request.',
-            timestamp: new Date().toISOString(),
-            resolvable: true,
-            insights: payload.insights || [],
-          };
-        }
+          resolvable: false,
+          result_type: null,
+          query: '',
+          chart_data: null,
+          result: null,
+          workflow_steps: [],
+          execution_time: payload.execution_time || 0
+        };
       }
 
       console.log('AI message:', aiMessage);
@@ -392,8 +413,15 @@ const Page = () => {
       console.error('Error calling backend:', error);
       const errorMessage = {
         role: "assistant",
-        content: "Sorry, I encountered an error while processing your request. Please try again.",
+        message: "Sorry, I couldn't connect to the backend service. Please make sure the query generation service is running on port 5001.",
         timestamp: new Date().toISOString(),
+        resolvable: false,
+        result_type: null,
+        query: '',
+        chart_data: null,
+        result: null,
+        workflow_steps: [],
+        execution_time: 0
       };
 
       setChatHistory((prev) =>
@@ -550,14 +578,26 @@ const Page = () => {
                 {currentChat?.title || "DataWare Assistant"}
               </h1>
               <p className="text-sm text-gray-500">
-                Ask me anything about your data warehouse
+                Advanced AI-powered query generation with 7-step workflow
               </p>
             </div>
           </div>
           <div className="flex items-center space-x-2">
-            <div className="flex items-center space-x-2 px-3 py-1.5 bg-green-50 rounded-full">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span className="text-xs font-medium text-green-700">Connected</span>
+            <div className={`flex items-center space-x-2 px-3 py-1.5 rounded-full ${
+              backendStatus === 'connected' ? 'bg-green-50 text-green-700' :
+              backendStatus === 'error' ? 'bg-red-50 text-red-700' :
+              'bg-yellow-50 text-yellow-700'
+            }`}>
+              <div className={`w-2 h-2 rounded-full ${
+                backendStatus === 'connected' ? 'bg-green-500' :
+                backendStatus === 'error' ? 'bg-red-500' :
+                'bg-yellow-500'
+              }`}></div>
+              <span className="text-xs font-medium">
+                {backendStatus === 'connected' ? 'Connected' :
+                 backendStatus === 'error' ? 'Disconnected' :
+                 'Checking...'}
+              </span>
             </div>
           </div>
         </div>
@@ -574,38 +614,38 @@ const Page = () => {
                   Welcome to DataWare Chatbot
                 </h2>
                 <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-                  Your intelligent data analytics assistant. Ask me about your data warehouse,
-                  generate reports, analyze trends, or get insights from your business data.
+                  Your intelligent data analytics assistant powered by advanced AI query generation.
+                  Ask me about your data warehouse, generate reports, analyze trends, or get insights from your business data.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                   <div className="p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                     <BarChart3 className="w-8 h-8 text-blue-600 mb-3 mx-auto" />
-                    <h3 className="font-semibold text-gray-900 mb-2">Generate Charts</h3>
-                    <p className="text-sm text-gray-600">Create visualizations from your data with natural language queries</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">Smart Charts</h3>
+                    <p className="text-sm text-gray-600">AI-powered chart generation with automatic type selection</p>
                   </div>
                   <div className="p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                     <Database className="w-8 h-8 text-green-600 mb-3 mx-auto" />
-                    <h3 className="font-semibold text-gray-900 mb-2">Query Data</h3>
-                    <p className="text-sm text-gray-600">Ask questions about your database in plain English</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">7-Step Workflow</h3>
+                    <p className="text-sm text-gray-600">Advanced query processing with validation and correction</p>
                   </div>
                   <div className="p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                     <Settings className="w-8 h-8 text-purple-600 mb-3 mx-auto" />
-                    <h3 className="font-semibold text-gray-900 mb-2">Get Insights</h3>
-                    <p className="text-sm text-gray-600">Discover patterns and trends in your business data</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">Auto-Correction</h3>
+                    <p className="text-sm text-gray-600">Intelligent SQL generation with error handling</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center space-x-6 text-sm text-gray-500">
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span>Real-time data processing</span>
+                    <span>7-step AI workflow</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span>AI-powered analytics</span>
+                    <span>Smart chart generation</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span>Custom insights</span>
+                    <span>Auto-correction</span>
                   </div>
                 </div>
               </div>
@@ -668,12 +708,17 @@ const Page = () => {
               </div>
               <button
                 type="submit"
-                disabled={!input.trim() || isLoading}
+                disabled={!input.trim() || isLoading || backendStatus !== 'connected'}
                 className="px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium"
               >
                 Send
               </button>
             </div>
+            {backendStatus !== 'connected' && (
+              <div className="mt-2 text-sm text-red-600">
+                ⚠️ Backend service not connected. Please start the query generation service on port 5001.
+              </div>
+            )}
           </form>
         </div>
       </div>

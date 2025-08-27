@@ -6,6 +6,7 @@ import os
 import pickle
 import tempfile
 import json
+from typing import List, Dict, Any
 
 class MultiTableEmbeddingSearch:
     def __init__(self):
@@ -164,15 +165,29 @@ class MultiTableEmbeddingSearch:
         
         return json.dumps(results, indent=2, default=str)
 
-# Usage example
-def search_query(query: str, top_k: int = 10):
-    search_engine = MultiTableEmbeddingSearch()
-    search_engine.load_all_embeddings()
-    result = search_engine.search(query, top_k)
-    print(result)
-    return result
-
-# Test the function
-if __name__ == "__main__":
-    # Example usage - replace with your actual query
-    result = search_query("europe", 10)
+    def search_multiple_terms(self, terms: List[str], top_k: int = 10) -> Dict[str, List[Dict[str, Any]]]:
+        if self.index is None:
+            raise ValueError("Index not built. Call load_all_embeddings() first.")
+        
+        results = {}
+        
+        for term in terms:
+            if term and len(term.strip()) >= 3:
+                query_embedding = self.model.encode([term]).astype(np.float32)
+                distances, indices = self.index.search(query_embedding, top_k)
+                
+                term_results = []
+                for distance, idx in zip(distances[0], indices[0]):
+                    if idx < len(self.metadata):
+                        metadata = self.metadata[idx]
+                        similarity_score = 1 / (1 + distance)
+                        
+                        term_results.append({
+                            'similarity_score': round(similarity_score, 4),
+                            'data': metadata['row_data']
+                        })
+                
+                if term_results:
+                    results[term] = term_results
+        
+        return results

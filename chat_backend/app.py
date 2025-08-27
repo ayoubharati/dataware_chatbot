@@ -20,7 +20,7 @@ CORS(app)
 
 # Configuration
 SCHEMA_FILE_PATH = os.path.join(os.path.dirname(__file__), "schema_dataware_test.md")
-GEMINI_API_KEY = "AIzaSyBKhSXv7s7FjhCb0BVc8A5igxVluz6Xv84"
+GEMINI_API_KEY = "AIzaSyAOnTwL8D2EtUzXJyppjpiPVATOgAMf0YE"
 DB_CONFIG = {
     'host': 'localhost',
     'port': 5433,
