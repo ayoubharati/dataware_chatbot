@@ -1,16 +1,16 @@
 import os
 import google.generativeai as genai
 
-# --- SETUP CONFIG ---
 SCHEMA_FILE_PATH = os.path.join(os.path.dirname(__file__), "schema_dataware_test.md")
-GEMINI_API_KEY = "AIzaSyBpzfYE3-shtUotP7iCBs34MNleO5upsrU"
 
-# Initialize Gemini
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+if not GEMINI_API_KEY:
+    raise RuntimeError("GEMINI_API_KEY not set in environment.")
+
 genai.configure(api_key=GEMINI_API_KEY)
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel("gemini-1.5-flash")
 
-# --- LOAD SCHEMA FILE ---
-with open(SCHEMA_FILE_PATH, 'r', encoding='utf-8') as f:
+with open(SCHEMA_FILE_PATH, "r", encoding="utf-8") as f:
     schema_str = f.read()
 
 # --- GEMINI EXTRACTION FUNCTION ---
